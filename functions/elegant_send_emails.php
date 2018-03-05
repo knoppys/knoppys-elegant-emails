@@ -105,14 +105,5 @@ function  elegantSave($title,$to,$messagetext,$properties){
         //Add the property price
         update_post_meta($newProperyEmail, 'propprice_'.$property[0], $property[2]);
 
-    }
-
-    if ($newProperyEmail) {
-        echo 'Your new email has been saved.';
-    } else {
-        echo 'Your new email has not been saved.';
-    }
-    
-
-  
+    } 
 }
