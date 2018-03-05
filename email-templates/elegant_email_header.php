@@ -155,11 +155,11 @@ function elegant_email_header(){ ob_start(); ?>
 
 	</style>
 </head>
-<body class="clean-body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #E3E8E5">
+<body class="clean-body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #FFFFFF">
 	<!--[if IE]><div class="ie-browser"><![endif]-->
 	<!--[if mso]><div class="mso-container"><![endif]-->
-	<div class="nl-container" style="min-width: 320px;Margin: 0 auto;background-color: #E3E8E5">
-		<!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #E3E8E5;"><![endif]-->
+	<div class="nl-container" style="min-width: 320px;Margin: 0 auto;background-color: #FFFFFF">
+		<!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #FFFFFF;"><![endif]-->
 		<div style="background-color:transparent;">
 			<div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;width: 600px;width: calc(29000% - 179200px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
 				<div style="border-collapse: collapse;display: table;width: 100%;">
@@ -170,7 +170,7 @@ function elegant_email_header(){ ob_start(); ?>
 							<!--[if (!mso)&(!IE)]><!-->
 							<div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;">
 								<!--<![endif]-->
-								<div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+								<div style="padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">
 									<!--[if (mso)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px;padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
 									<div align="center">
 										<div style="border-top: 0px solid transparent; width:100%; line-height:0px; height:0px; font-size:0px;">
