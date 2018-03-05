@@ -6,7 +6,7 @@ function add_menu(){
 	add_menu_page( 'Elegant EMails', 'Elegant EMails', 'manage_options', 'elegant-emails', 'elegant_emails_new', 'dashicons-email-alt', 1 );
 	add_submenu_page( 'elegant-emails', 'Existing EMails', 'Existing EMails', 'manage_options', 'existing-elegant-emails', 'elegant_emails_existing');
 }
-add_action('init', 'add_menu');
+add_action('admin_menu', 'add_menu');
 
 //Build the New Email Page
 function elegant_emails_new() { ?>

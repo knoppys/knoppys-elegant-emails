@@ -1,3 +1,6 @@
+V5.7
+Changed the add_menu() function in menu_pages.php to the admin_init hook instead of init
+
 V5.
 Fixed a few bugs, could do with sorting the primary filters on the email page
 
