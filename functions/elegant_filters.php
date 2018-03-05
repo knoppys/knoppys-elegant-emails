@@ -37,7 +37,7 @@ function elegant_filters(){
 			</td>									
 			<td valign="top">
 				<ul class="agentname" multiple>
-					<?php $meta_values = get_meta_values( 'agent_name', 'properties' ); ?>				
+					<?php $meta_values = get_meta_values( 'agent_name', 'properties' );	?>				
 					<?php foreach ($meta_values as $meta_value) { ?>
 						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value)); ?>"><?php echo $meta_value; ?></li>
 					<?php } ?>
@@ -104,11 +104,15 @@ function get_meta_values( $meta_key,  $post_type ) {
         )
     );
 
+    //Get the meta values
     $meta_values = array();
     foreach( $posts as $post ) {
-        $meta_values[] = get_post_meta( $post->ID, $meta_key, true );
+    	if (!get_post_meta( $post->ID, $meta_key, true )) {} 
+    	else {
+    		$meta_values[] = get_post_meta( $post->ID, $meta_key, true );
+    	}        
     }
-
+    sort($meta_values);
     $newarray = array_unique($meta_values);
     return $newarray;
 

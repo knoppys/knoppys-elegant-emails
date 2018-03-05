@@ -217,10 +217,8 @@ function meta_class($id){
 	//Meta classes that are variable names
 	if(isset($meta['type_name'][0])){array_push($metaArray, str_replace(' ', '', $meta['type_name'][0]));}
 	if(isset($meta['sale_or_rent'][0])){array_push($metaArray, str_replace(' ', '', $meta['sale_or_rent'][0]));}
-	if(isset($meta['price'][0])){array_push($metaArray,  str_replace(' ', '', $meta['price'][0]));}
 	if(isset($meta['number_of_beds'][0])){array_push($metaArray, str_replace(' ', '', $meta['number_of_beds'][0].'beds'));}
 	if(isset($meta['agent_name'][0])){array_push($metaArray, str_replace(' ', '', $meta['agent_name'][0]));}
-	
 	
 	return implode(' ', $metaArray);
 

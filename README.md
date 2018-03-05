@@ -1,3 +1,6 @@
+V5.8
+Removed the price option in function meta_class() as it was spitting out some extra code above the property table. 
+
 V5.7
 Changed the add_menu() function in menu_pages.php to the admin_init hook instead of init
 
