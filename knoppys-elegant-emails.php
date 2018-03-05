@@ -3,7 +3,7 @@
 Plugin Name:       Knoppys Elegant Emails
 Plugin URI:        https://github.com/knoppys/knoppys-elegant-emails.git
 Description:       This plugin allows the user to curate property recommendation emails, save and send them. For help and support, please contact coda@knoppys.co.uk
-Version:           5.1
+Version:           5.3
 Author:            Knoppys Digital Limited
 License:           GNU General Public License v2
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -31,6 +31,9 @@ foreach ( glob( dirname( __FILE__ ) . '/email-templates/*.php' ) as $root ) {
 * Load SCP Scripts
 ****************************/
 function elegant_scripts() {    
+
+	wp_register_style( 'datatablessCss', plugin_dir_url( __FILE__ ) . 'css/datatables.min.css', false, '1.0.0' );
+	wp_enqueue_style( 'datatablessCss' );  
 
 	wp_register_style( 'cssCore', plugin_dir_url( __FILE__ ) . 'css/core.css', false, '1.0.0' );
 	wp_enqueue_style( 'cssCore' );  
