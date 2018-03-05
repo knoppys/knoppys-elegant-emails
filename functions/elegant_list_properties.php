@@ -14,13 +14,13 @@ function properties_arguments($id){
 			'post_type' => 'properties',
 			'posts_per_page' => -1,
 			'exclude' => $properties,
-			'post_status' => array('publish', 'pending', 'draft', 'auto-draft', 'future', 'private', 'inherit', 'trash')
+			'post_status' => array('publish', 'draft', 'private')
 		);
 	} else {
 		$args = array(
 			'post_type' => 'properties',
 			'posts_per_page' => -1,
-			'post_status' => array('publish', 'pending', 'draft', 'auto-draft', 'future', 'private', 'inherit', 'trash')
+			'post_status' => array('publish', 'draft', 'private')
 		);
 	}	
 	return $args;
