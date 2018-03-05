@@ -1,0 +1,1085 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"new",
+				"newEmailForm"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
+				"email",
+				"emailform"
+			],
+			[
+				"property",
+				"propertyrow"
+			],
+			[
+				"vac",
+				"vacancy"
+			],
+			[
+				"job",
+				"jobID"
+			],
+			[
+				"vaca",
+				"vacancy"
+			],
+			[
+				"vacan",
+				"vacancyXML"
+			],
+			[
+				"if",
+				"ifelse\tif … else …"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"proper",
+				"property_locations_classes"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"button",
+				"buttonSelected"
+			],
+			[
+				"eleg",
+				"elegant_list_properties"
+			],
+			[
+				"Ref",
+				"Reference"
+			],
+			[
+				"meta",
+				"meta_key"
+			],
+			[
+				"post",
+				"post_status"
+			],
+			[
+				"term",
+				"termsArgs"
+			],
+			[
+				"pr",
+				"property"
+			],
+			[
+				"loc",
+				"localVacancy"
+			],
+			[
+				"v",
+				"varray"
+			],
+			[
+				"a",
+				"args"
+			],
+			[
+				"va",
+				"vacancies"
+			],
+			[
+				"vacancy",
+				"vacancyCheck"
+			],
+			[
+				"jbo",
+				"jobRef"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"vacac",
+				"vacancy"
+			],
+			[
+				"exis",
+				"existingPostId"
+			],
+			[
+				"iom",
+				"iomTaxRate"
+			],
+			[
+				"arra",
+				"array"
+			],
+			[
+				"int",
+				"int_val"
+			],
+			[
+				"th",
+				"thead\tTag"
+			],
+			[
+				"item",
+				"item_product"
+			],
+			[
+				"cus",
+				"customer_orders"
+			],
+			[
+				"last",
+				"lastname"
+			],
+			[
+				"fi",
+				"firstname"
+			],
+			[
+				"first",
+				"first_name"
+			],
+			[
+				"uk",
+				"ukTaxRate"
+			],
+			[
+				"tax",
+				"tax-calc-widget"
+			],
+			[
+				"content",
+				"contentblock"
+			],
+			[
+				"cont",
+				"contentblocks"
+			],
+			[
+				"thumb",
+				"thumb_url_array"
+			],
+			[
+				"rand",
+				"randompics"
+			],
+			[
+				"pos",
+				"postcode"
+			],
+			[
+				"based",
+				"basedon"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"job_type",
+				"job_type_terms"
+			],
+			[
+				"se",
+				"select\tTag"
+			],
+			[
+				"remo",
+				"removeClass"
+			],
+			[
+				"str_",
+				"str_replace"
+			],
+			[
+				"job_",
+				"job_type_code"
+			],
+			[
+				"jo",
+				"jobID"
+			],
+			[
+				"job_ty",
+				"job_type_code"
+			],
+			[
+				"categ",
+				"category"
+			],
+			[
+				"category",
+				"categoryName"
+			],
+			[
+				"ca",
+				"categoryName"
+			],
+			[
+				"cat",
+				"categoryName"
+			],
+			[
+				"ut",
+				"utf8_encode"
+			],
+			[
+				"vacn",
+				"vacancyXML"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
+				"glo",
+				"glob"
+			],
+			[
+				"taxo",
+				"taxonomyName"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"fun",
+				"fun\tfunction …"
+			],
+			[
+				"kn",
+				"knopost"
+			],
+			[
+				"server",
+				"_SERVER"
+			],
+			[
+				"get_tem",
+				"get_template_directory_uri"
+			],
+			[
+				"landing",
+				"landingbanner"
+			],
+			[
+				"post_",
+				"post_ids"
+			],
+			[
+				"get_template",
+				"get_template_part"
+			],
+			[
+				"att",
+				"attachmentID"
+			],
+			[
+				"n",
+				"ajax_nonce"
+			],
+			[
+				"login",
+				"loginUrl"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"wp",
+				"wp_mail"
+			],
+			[
+				"wp_get",
+				"wp_get_current_user"
+			],
+			[
+				"query",
+				"queryUrl"
+			],
+			[
+				"unse",
+				"unset"
+			],
+			[
+				"get_template_",
+				"get_template_directory_uri"
+			],
+			[
+				"centre",
+				"centre"
+			],
+			[
+				"get_templ",
+				"get_template_part"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"qu",
+				"queryUrl"
+			],
+			[
+				"q",
+				"queryUrl"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"pau",
+				"pauseOnHover"
+			],
+			[
+				"ar",
+				"arrows"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"next",
+				"nextArrow"
+			],
+			[
+				"knop",
+				"knopost"
+			],
+			[
+				"tem",
+				"templateparts"
+			],
+			[
+				"sear",
+				"search_array"
+			],
+			[
+				"P",
+				"Post"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"the_post",
+				"the_post_thumbnail"
+			],
+			[
+				"child",
+				"childposts"
+			],
+			[
+				"custom",
+				"customer_order"
+			],
+			[
+				"order",
+				"orderId"
+			],
+			[
+				"ord",
+				"order_item"
+			],
+			[
+				"location",
+				"locationame"
+			],
+			[
+				"array",
+				"arraysearch"
+			],
+			[
+				"loca",
+				"locationame"
+			],
+			[
+				"locationa",
+				"locationarray"
+			],
+			[
+				"OB",
+				"object"
+			],
+			[
+				"kno",
+				"knopost"
+			],
+			[
+				"booking",
+				"booking"
+			],
+			[
+				"apa",
+				"apartmentobject"
+			],
+			[
+				"client",
+				"clientcurrency"
+			],
+			[
+				"operator",
+				"operatorcurrency"
+			],
+			[
+				"car",
+				"careersposts"
+			],
+			[
+				"font",
+				"fontawesome"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"subje",
+				"subjecttext"
+			],
+			[
+				"apartment",
+				"apartments"
+			],
+			[
+				"number",
+				"numberofnights"
+			],
+			[
+				"apart",
+				"apartment"
+			],
+			[
+				"posts",
+				"postcodes"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"date",
+				"datestring"
+			],
+			[
+				"comp",
+				"compare"
+			],
+			[
+				"per",
+				"period"
+			],
+			[
+				"ap",
+				"apartmentaddress"
+			],
+			[
+				"Documen",
+				"documentation"
+			],
+			[
+				"addit",
+				"additionalinformationtext"
+			],
+			[
+				"arrival",
+				"arrivaltext"
+			],
+			[
+				"book",
+				"bookingsmeta"
+			],
+			[
+				"arrivalp",
+				"arrivalprocess"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Snippet: ",
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: emailtable"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"installpack",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 188.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/tmp/fz3temp-1/32cca11IACH.xml",
+		"/tmp/fz3temp-1/create-update-post.php",
+		"/tmp/fz3temp-1/plugin-name.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/js/core.js",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/functions/elegant_send_emails.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/functions/new_email_form.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/templates/old_emailbody/elegant_email_body.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/templates/old_emailbody/elegant_email_header.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/css/core.css",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/functions/elegant_filters.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-config.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/themes/EA/single-properties.php",
+		"/tmp/fz3temp-1/single-properties.php",
+		"/tmp/fz3temp-1/core.js",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/functions/menu_pages.php",
+		"/home/alex/Desktop/plugin-name/templates/function-name-content.php",
+		"/tmp/fz3temp-1/email_appliaction_form.php",
+		"/tmp/fz3temp-1/functions-apartment-search.php",
+		"/tmp/fz3temp-1/admin-menu-apartment-search.php",
+		"/home/alex/Desktop/plugin/plugin-name.php",
+		"/home/alex/Desktop/plugin-name/functions/function-name.php",
+		"/tmp/fz3temp-1/functions 2.php",
+		"/tmp/fz3temp-1/content-product.php",
+		"/tmp/fz3temp-1/single-product.php",
+		"/tmp/fz3temp-1/content-single-jobs.php",
+		"/tmp/fz3temp-1/template_job_search.php",
+		"/tmp/fz3temp-1/old-updatepost.php",
+		"/tmp/fz3temp-1/content-item-listings.php",
+		"/tmp/fz3temp-1/knoppys-greenfield-emails.php",
+		"/tmp/fz3temp-1/core 2.js",
+		"/tmp/fz3temp-1/c9f95011HBCH.xml",
+		"/tmp/fz3temp-1/781a7fc05MCLG.xml",
+		"/tmp/fz3temp-1/32cca11IACH 2.xml",
+		"/tmp/fz3temp-1/PublishJobCategories.xml",
+		"/tmp/fz3temp-1/plugin-name 2.php",
+		"/tmp/fz3temp-1/short-description.php",
+		"/tmp/fz3temp-1/bbe36f3L5BH.xml",
+		"/tmp/fz3temp-1/c39fdaaHBCH.xml",
+		"/tmp/fz3temp-1/11e5ad3aP5BHClientAccountant.xml",
+		"/tmp/fz3temp-1/template_home.php",
+		"/tmp/fz3temp-1/style.css",
+		"/tmp/fz3temp-1/category.php",
+		"/tmp/fz3temp-1/archive.php",
+		"/tmp/fz3temp-1/functions.php",
+		"/tmp/fz3temp-1/slick.min.js",
+		"/tmp/fz3temp-1/slick.min.css",
+		"/tmp/fz3temp-1/template_team.php",
+		"/tmp/fz3temp-1/single-teammember.php",
+		"/home/alex/.config/sublime-text-3/Packages/User/jquery.sublime-snippet",
+		"/tmp/fz3temp-1/wp-config.php",
+		"/tmp/fz3temp-1/1bad5edONLG.xml",
+		"/tmp/fz3temp-1/11e5ad3aP5BH.xml",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/functions/elegant_list_properties.php",
+		"/home/alex/Desktop/untitled.html",
+		"/tmp/fz3temp-1/old-posttypes.php",
+		"/tmp/fz3temp-1/file.xml",
+		"/tmp/fz3temp-1/single-vacancy.php",
+		"/home/alex/Desktop/knoppys-simple-cron/plugin-name.php",
+		"/tmp/fz3temp-1/single-bullhornjoblisting.php",
+		"/home/alex/Desktop/file.xml",
+		"/tmp/fz3temp-1/foundation.js",
+		"/tmp/fz3temp-1/template_full_width.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/knoppys-elegant-emails.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/css/datatables.min.css",
+		"/tmp/fz3temp-1/functions-wpmenu.php",
+		"/tmp/fz3temp-1/admin-menu-accounts.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/functions/elegant_navigation.php",
+		"/tmp/fz3temp-1/scp-bookings.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/address/wp-content/plugins/knoppys-elegant-emails/js/datatables.min.js",
+		"/tmp/fz3temp-1/template_about.php",
+		"/tmp/fz3temp-1/wp-config 2.php",
+		"/tmp/fz3temp-1/post-type.php",
+		"/tmp/fz3temp-1/README.md",
+		"/tmp/fz3temp-1/wp-cron.php",
+		"/tmp/fz3temp-1/.htaccess",
+		"/tmp/fz3temp-1/navigation.php",
+		"/tmp/fz3temp-1/admin-menu-scpparent.php",
+		"/tmp/fz3temp-1/admin-menu-upcomingbookings.php",
+		"/home/alex/Desktop/knoppys-logic-melon/inc/old-posttypes.php",
+		"/home/alex/Desktop/knoppys-logic-melon/plugin-name.php",
+		"/home/alex/Desktop/knoppys-logic-melon/inc/create-update-post.php",
+		"/home/alex/Desktop/knoppys-logic-melon/inc/old-updatepost.php",
+		"/home/alex/Desktop/knoppys-hamblin-emails/knoppys-greenfield-emails.php",
+		"/home/alex/Desktop/knoppys-hamblin-emails/README.md",
+		"/tmp/fz3temp-1/archive-vacancy.php",
+		"/tmp/fz3temp-1/template_find-a-job.php",
+		"/tmp/fz3temp-1/bbe36f3L5BH 2.xml",
+		"/tmp/fz3temp-1/c9f95011HBCH 2.xml",
+		"/tmp/fz3temp-1/update_user.php",
+		"/tmp/fz3temp-1/content-single-product.php",
+		"/tmp/fz3temp-1/short-description 2.php",
+		"/tmp/fz3temp-1/product-attributes.php",
+		"/tmp/fz3temp-1/meta.php",
+		"/home/alex/.config/sublime-text-3/Packages/User/grid.sublime-snippet",
+		"/tmp/fz3temp-1/wp-config 3.php",
+		"/tmp/fz3temp-1/functions 3.php",
+		"/tmp/fz3temp-1/template_register.php",
+		"/tmp/fz3temp-1/template_application.php",
+		"/tmp/fz3temp-1/footer-home.php",
+		"/tmp/fz3temp-1/footer 2.php",
+		"/tmp/fz3temp-1/page.php",
+		"/tmp/fz3temp-1/single.php",
+		"/tmp/fz3temp-1/socialshare.php",
+		"/tmp/fz3temp-1/login.php",
+		"/tmp/fz3temp-1/template_upload.php",
+		"/tmp/fz3temp-1/template_thankyou_userupdate.php",
+		"/tmp/fz3temp-1/email_new_user.php",
+		"/tmp/fz3temp-1/email_new_job.php",
+		"/tmp/fz3temp-1/email-reasons.php",
+		"/tmp/fz3temp-1/email-body.php",
+		"/tmp/fz3temp-1/header-search.php",
+		"/tmp/fz3temp-1/style 2.css",
+		"/tmp/fz3temp-1/footer.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/tennis/wp-content/themes/buildpress/functions.php",
+		"/home/alex/Desktop/tennis/wp-config.php",
+		"/run/user/1000/gvfs/ftp:host=192.168.0.40,user=knoppysdev/home/knoppysdev/websites/tennis/wp-config.php",
+		"/tmp/fz3temp-1/sidebars.php",
+		"/tmp/fz3temp-1/footer-landing.php",
+		"/tmp/fz3temp-1/post_type.php",
+		"/tmp/fz3temp-1/single-products.php",
+		"/tmp/fz3temp-1/header 4.php",
+		"/tmp/fz3temp-1/header.php--",
+		"/tmp/fz3temp-1/header 3.php",
+		"/tmp/fz3temp-1/header 2.php",
+		"/tmp/fz3temp-1/header.php---",
+		"/tmp/fz3temp-1/header.php",
+		"/tmp/fz3temp-1/style 3.css",
+		"/tmp/fz3temp-1/db.php"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"size=\"30\"",
+			"img",
+			"num",
+			"num12",
+			"contac",
+			"images",
+			"########",
+			"random",
+			"Items",
+			"size=\"return this.length();\"",
+			"\n\t\t\t\t\t<!--<td class=\"\"><span class=\"green\">&#10004;</span></td>-->\t\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t\t\t\t\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t\t-->\n\t\t\t\t\t<!--<td class=\"\"><span class=\"red\">&#215;</span></td>\t\t\t-->\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<!--<td class=\"\">€145,000</td>\t-->\n\t\t\t\t\n\t\t\t\t\t\t\n",
+			"form",
+			"the_title",
+			"random",
+			"sidebar",
+			"Post Type",
+			"data",
+			"datat",
+			"data",
+			"<?php echo meta_class($property->ID); ?>",
+			"elegant_navigation",
+			"scp_scripts",
+			"cron",
+			"knoppys-elegant-emails",
+			"my_plugin_menu",
+			"ref",
+			"Industrys",
+			"Sector",
+			"troy",
+			"knoppys-troy",
+			"random",
+			"overlay",
+			"id",
+			"resetCalc",
+			"$",
+			"tax",
+			"random",
+			"login_redi",
+			"login",
+			"cod",
+			"bday",
+			"date",
+			"message",
+			"workpermit",
+			"messageNewCandidate",
+			"testing",
+			"\">';",
+			"social",
+			"</span>",
+			"sidebar",
+			"face",
+			"storefront_single_post",
+			"transport",
+			"mail",
+			"step1 img",
+			"cv",
+			"login()",
+			"login",
+			"logibn",
+			"update",
+			"Greenfield IT Recruitment",
+			"role",
+			"pass",
+			"https",
+			"date",
+			"\">\n",
+			"update",
+			"login",
+			">\n",
+			"bar",
+			"admin",
+			"accomo",
+			"Customsise the wp menu",
+			"removeHeadLinks",
+			"vce",
+			"#ff0000",
+			"#ff0000\"",
+			"ukTkeHome",
+			"inline-block",
+			".ticket-buttons",
+			".collapse.in",
+			".collapse .in",
+			"packages",
+			".top",
+			"top",
+			"random",
+			"map",
+			"contact i",
+			".btn{",
+			".btn",
+			"200px",
+			"main",
+			"rgba",
+			"Boobie xxx",
+			"a::after",
+			".widget-title",
+			"the_header(",
+			"theheader",
+			"')</",
+			"Greenfield IT Recruitment",
+			"knopost",
+			"sidebar",
+			"#74B542",
+			"#",
+			"img",
+			"41",
+			"Greenfield IT Recruitment",
+			"img",
+			"message",
+			"white",
+			"{\n",
+			"white",
+			":hover",
+			"(string)",
+			"shrewsbury",
+			"shropshire",
+			"proceeds will be donated to the injured rider fund",
+			"the injured riders fund",
+			"veryworthy",
+			"keyobjectives",
+			"racefans",
+			"backgroundColor",
+			"?%3E",
+			"%20",
+			"<php",
+			"%3C?",
+			"mation which is the property of the Client.",
+			"allocatea"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"elegant_send_email",
+			"Team Members",
+			"size=\"30\"",
+			"",
+			"Team Member",
+			"",
+			"elegant_filters",
+			"elegant_scripts",
+			"knoppys_elegant_emails",
+			"knoppys-elegant-emails",
+			"Industries",
+			"Industry",
+			"melon",
+			"knoppys-logic-melon",
+			"jQuery",
+			"messageNewJob",
+			"",
+			"Hamblin Employment Group",
+			"#e5007d",
+			"ukTakeHome",
+			"block",
+			"Nicole Harrison",
+			"Hamblin Employment Group",
+			"#00a9e0",
+			"Hamblin Employment Group",
+			"",
+			"chester",
+			"shrewsbury",
+			"proceeds will be donated to an injured rider fund",
+			"a fund for injured riders",
+			"very worthy",
+			"key objectives",
+			"background",
+			"?>",
+			" ",
+			"<?php",
+			"<",
+			"Sector",
+			"hours",
+			"No of hours",
+			"no_of_hours",
+			"Hours ",
+			"hours",
+			"Job Type",
+			"Job Types",
+			"Job Type",
+			"Vacancy",
+			"Vacancies",
+			"Vacancy",
+			"<a target=\"_blank\" href",
+			"utf8mb4_unicode_ci",
+			"/images/logos/",
+			"",
+			"Cooking Oil Deliveries",
+			"Eppynt Motor Cycle Road Races",
+			"</i> Book Tickets</a>",
+			"jQuery",
+			"b1171d",
+			"df1f26",
+			"h3",
+			"h2",
+			"kss",
+			"chocolateboxregular",
+			"#000000",
+			"delete_reviews",
+			"$wp_query",
+			"knoppys-greenfield-emails",
+			"message",
+			"wp_ajax",
+			"email_appliaction_form",
+			"'",
+			"#74B542",
+			"Cheshire and Mersyside",
+			"get_site_url",
+			"<a href=\"<?php echo get_sire_url(); ?>/event-details\" class=\"btn btn-primary shout\">Event Details</a>",
+			"categories",
+			"h2",
+			"updatecandidateprofile",
+			"save_team_profile_fields",
+			"",
+			"usp_",
+			"#c30e2f",
+			"#1b191a",
+			"#000000",
+			"768px",
+			"col-xs-6",
+			".header",
+			"jQuery",
+			"",
+			"social.png",
+			"rd_duplicate_post_as_draft_parent",
+			"h2",
+			"'",
+			"font-size: 14px",
+			"<?php echo get_site_url(); ?>",
+			"loz8008513/wp-content",
+			"/wp-content",
+			"185.77.83.90/~loz8008513",
+			".default-template",
+			"444",
+			"jQuery",
+			"'",
+			"Product",
+			"slickslider",
+			"Search",
+			"SALOp",
+			"Salop Windows & Doors",
+			"caravan cleaner",
+			"pmrammo.co.uk",
+			"sp_",
+			"$newparent",
+			"$parent",
+			"rd_duplicate_group_as_draft",
+			"tweedmill",
+			"",
+			"wpb_widget_domain",
+			"knoppys_testing_page",
+			"knoppys_cc_to_store",
+			"\"",
+			"'",
+			"storeemail",
+			"Knoppys - Store Notifications for Local Pickup Plus",
+			"ffffff",
+			"#ffffff",
+			".blog-articles",
+			"",
+			"sp"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GitSavvy":
+	{
+		"height": 154.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 29.0
+	},
+	"pinned_build_system": "",
+	"project": "elegant.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 247.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
