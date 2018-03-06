@@ -1,3 +1,6 @@
+V6.1
+Updated the colour of hte header text in the email body. 
+
 V5.8
 Removed the price option in function meta_class() as it was spitting out some extra code above the property table. 
 

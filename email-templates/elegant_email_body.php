@@ -16,9 +16,9 @@ function elegant_email_body($messagtext,$properties){
 		            <tr>    
 		                <td class="mobilestack">
 		                	<center>
-		                		<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 1.5; font-weight: bold;"><a href="http://www.elegant-address.com">www.elegant-address.com</a></span></p>
-		                		<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 1.5; font-weight: bold;"><a href="mailto:enquiries@elegant-address.com">enquiries@elegant-address.com</a></span></p>	
-		                		<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 1.5; font-weight: bold;"><a href="tel:441244629963">+44 (0) 1244 629 963</a></span></p>	
+		                		<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 1.5; font-weight: bold;"><a href="http://www.elegant-address.com"><span style="color:rgb(188, 133, 54)">www.elegant-address.com</span></a></span></p>
+		                		<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 1.5; font-weight: bold;"><a href="mailto:enquiries@elegant-address.com"><span style="color:rgb(188, 133, 54)">enquiries@elegant-address.com</span></a></span></p>	
+		                		<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 1.5; font-weight: bold;"><a href="tel:441244629963"><span style="color:rgb(188, 133, 54)">+44 (0) 1244 629 963</span></a></span></p>	
 		                	</center>
 		                	<div style="margin-top:10px;padding-bottom: 10px">
 	                    		<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 1.5; font-weight: normal;"><?php echo $messagtext; ?></span></p>	
