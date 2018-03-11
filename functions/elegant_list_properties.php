@@ -37,10 +37,53 @@ function elegant_list_properties(){
 	
 	?>
 
+	<table class="saved" cellspacing="0" cellpadding="0" class="" width="600" border-collapse="collapse">
+		<tbody>
+			<tr class="headerrow">
+					<th>
+						Image
+					</th>
+					<th class="name">
+						Name
+					</th>
+					<th>
+						Location
+					</th>
+					<th>
+						Type
+					</th>
+					<th>
+						Sale or Rent
+					</th>
+					<th>
+						Agent Name
+					</th>
+					<th>
+						Number of Beds
+					</th>
+					<th>
+						Spa
+					</th>					
+					<th>
+						Heated Pool
+					</th>
+					<th>
+						Beach Access
+					</th>
+					<th>
+						Air Con Full
+					</th>
+					<th>
+						Heli Pad
+					</th>					
+				</tr>
+		</tbody>
+	</table>
+
 	<table class="elegant_list_properties">	
 		
 			<thead>
-				<tr>
+				<tr class="headerrow">
 					<th>
 						Image
 					</th>
@@ -122,7 +165,7 @@ function elegant_list_properties(){
 			
 			<?php
 			
-			//This gets and displays all the existing properties if its an existing email.
+			//This gets and displays all the existing properties if its an existing email. str_replace(array(" ", "'"), '', $meta_value)
 			existing_properties($_SERVER["QUERY_STRING"]);
 			
 			//This returns all the properties for a new email and the remaining properties form an existing one.
@@ -218,7 +261,7 @@ function meta_class($id){
 	if(isset($meta['type_name'][0])){array_push($metaArray, str_replace(' ', '', $meta['type_name'][0]));}
 	if(isset($meta['sale_or_rent'][0])){array_push($metaArray, str_replace(' ', '', $meta['sale_or_rent'][0]));}
 	if(isset($meta['number_of_beds'][0])){array_push($metaArray, str_replace(' ', '', $meta['number_of_beds'][0].'beds'));}
-	if(isset($meta['agent_name'][0])){array_push($metaArray, str_replace(' ', '', $meta['agent_name'][0]));}
+	if(isset($meta['agent_name'][0])){array_push($metaArray, str_replace(array(" ", "'"), '', $meta['agent_name'][0]));}
 	
 	return implode(' ', $metaArray);
 

@@ -25,7 +25,7 @@ function elegant_filters(){
 				</ul>
 			</td>
 			<td valign="top">
-				<ul class="propertytype" multiple>					
+				<ul class="propertytype others" multiple>					
 					<li data-id="villa">Villa</li>		
 					<li data-id="hotel">Hotel</li>					
 					<li data-id="hotelVillas">Hotel Villas</li>	
@@ -36,7 +36,7 @@ function elegant_filters(){
 				</ul>
 			</td>									
 			<td valign="top">
-				<ul class="agentname" multiple>
+				<ul class="agentname others" multiple>
 					<?php $meta_values = get_meta_values( 'agent_name', 'properties' );	?>				
 					<?php foreach ($meta_values as $meta_value) { ?>
 						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value)); ?>"><?php echo $meta_value; ?></li>
@@ -44,7 +44,7 @@ function elegant_filters(){
 				</ul>
 			</td>			
 			<td valign="top">	
-				<ul class="bedrooms" multiple>
+				<ul class="bedrooms others" multiple>
 					<?php $meta_values = get_meta_values( 'number_of_beds', 'properties' ); ?>				
 					<?php foreach ($meta_values as $meta_value) { ?>
 						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value.'beds')); ?>"><?php echo $meta_value; ?> Beds</li>
@@ -52,7 +52,7 @@ function elegant_filters(){
 				</ul>		
 			</td>	
 			<td valign="top">				
-				<ul class="saleorrent" multiple>					
+				<ul class="saleorrent others" multiple>					
 					<li data-id="sale">Sale</li>		
 					<li data-id="rental">Rental</li>							
 				</ul>
