@@ -31,7 +31,7 @@ function elegantSendEmail() {
 	//Get the array sent
 	$to = $_POST['datastring']['newEmailForm'][0][0];
 	$title = $_POST['datastring']['newEmailForm'][0][1];
-	$messagetext = $_POST['datastring']['newEmailForm'][0][2];
+    $messagetext = nl2br(rawurldecode($_POST['datastring']['newEmailForm'][0][2]));        
 	$properties = $_POST['datastring']['properties'];
 
     //Send the email and get a report back

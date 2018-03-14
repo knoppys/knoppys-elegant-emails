@@ -12,7 +12,6 @@ add_action('admin_menu', 'add_menu');
 function elegant_emails_new() { ?>
 	<div class="wrap">
 		<h2>Elegant Emails</h2>		
-		<?php echo elegant_navigation(); ?>
 		<?php echo new_email_form($_SERVER["QUERY_STRING"]); ?>
 	 	<?php echo elegant_filters(); ?>
 	 	<?php echo elegant_list_properties(); ?>
@@ -25,7 +24,6 @@ function elegant_emails_new() { ?>
 function elegant_emails_existing() { ?>
 	<div class="wrap">
 		<h2>Existing Emails</h2>		
-		<?php echo elegant_navigation(); ?>
 		<?php //echo new_email_form(); ?>
 	 	<?php //echo elegant_filters(); ?>
 	 	<?php echo elegant_list_properties_existing(); ?>	 	

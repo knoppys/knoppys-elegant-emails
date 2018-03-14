@@ -32,53 +32,14 @@ function elegant_list_properties(){
 	$args = properties_arguments($_SERVER["QUERY_STRING"]);
 
 	$properties = get_posts($args);
+
+	echo saved_property_table();
 	
 	ob_start(); 
+
+	
 	
 	?>
-
-	<table class="saved" cellspacing="0" cellpadding="0" class="" width="600" border-collapse="collapse">
-		<tbody>
-			<tr class="headerrow">
-					<th>
-						Image
-					</th>
-					<th class="name">
-						Name
-					</th>
-					<th>
-						Location
-					</th>
-					<th>
-						Type
-					</th>
-					<th>
-						Sale or Rent
-					</th>
-					<th>
-						Agent Name
-					</th>
-					<th>
-						Number of Beds
-					</th>
-					<th>
-						Spa
-					</th>					
-					<th>
-						Heated Pool
-					</th>
-					<th>
-						Beach Access
-					</th>
-					<th>
-						Air Con Full
-					</th>
-					<th>
-						Heli Pad
-					</th>					
-				</tr>
-		</tbody>
-	</table>
 
 	<table class="elegant_list_properties">	
 		
@@ -163,10 +124,7 @@ function elegant_list_properties(){
 				</tr>
 			</tfoot>
 			
-			<?php
-			
-			//This gets and displays all the existing properties if its an existing email. str_replace(array(" ", "'"), '', $meta_value)
-			existing_properties($_SERVER["QUERY_STRING"]);
+			<?php			
 			
 			//This returns all the properties for a new email and the remaining properties form an existing one.
 			foreach ($properties as $property) { 
@@ -288,12 +246,12 @@ function existing_properties($id){
 		if ($posts) {
 			foreach ($posts as $property) {
 			$meta = get_post_meta($property->ID); ?>
-				<tr id="<?php echo $property->ID; ?>" class="propertyrow <?php echo strtolower(meta_class($property->ID)); ?> <?php echo property_locations_classes($property->ID); ?> rowselected">
+				<tr id="<?php echo $property->ID; ?>" class="propertyrow <?php echo strtolower(meta_class($property->ID)); ?> <?php echo property_locations_classes($property->ID); ?> rowselected savedrow">
 					<td class=""><img src="<?php echo get_the_post_thumbnail_url($property->ID, array(75,75));?>"></td>
 					<td class="">
 					<a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?></a>
 						<div class="message-container">
-							<?php $notes = get_post_meta($query_array['id'], 'propnotes_'.$property->ID, true); ?>
+							<?php $notes = nl2br(rawurldecode(get_post_meta($query_array['id'], 'propnotes_'.$property->ID, true))); ?>
 							<?php $price = get_post_meta($query_array['id'], 'propprice_'.$property->ID, true); ?>
 							<textarea class="message"><?php echo $notes; ?></textarea>
 							<input type="text" name="price" class="price" placeholder="<?php echo $price; ?>" value="">
@@ -313,5 +271,64 @@ function existing_properties($id){
 				</tr>
 			<?php }		
 		} 
-	} 
+	} else {
+		return false;
+	}
+}
+
+function saved_property_table() {
+
+	ob_start(); ?>
+
+	<div class="saved-container" <?php if (!existing_properties($_SERVER["QUERY_STRING"] == false)){echo 'style="display:block !important"';} ?>>
+	<h2>Saved properties</h2>
+	<p>Properties marked in green will be sent in your email. You can reorder these properties using a drag and drop facility.</p>
+	<table class="saved" cellspacing="0" cellpadding="0" class="" width="600" border-collapse="collapse">	
+		<tbody>
+			<tr class="headerrow">
+					<th>
+						Image
+					</th>
+					<th class="name">
+						Name
+					</th>
+					<th>
+						Location
+					</th>
+					<th>
+						Type
+					</th>
+					<th>
+						Sale or Rent
+					</th>
+					<th>
+						Agent Name
+					</th>
+					<th>
+						Number of Beds
+					</th>
+					<th>
+						Spa
+					</th>					
+					<th>
+						Heated Pool
+					</th>
+					<th>
+						Beach Access
+					</th>
+					<th>
+						Air Con Full
+					</th>
+					<th>
+						Heli Pad
+					</th>					
+				</tr>
+				<?php //This gets and displays all the existing properties if its an existing email. str_replace(array(" ", "'"), '', $meta_value)
+				existing_properties($_SERVER["QUERY_STRING"]); ?>
+		</tbody>
+	</table>
+	</div>
+
+	<?php $content = ob_get_clean();
+	return $content;
 }

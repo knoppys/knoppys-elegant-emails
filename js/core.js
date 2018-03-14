@@ -9,7 +9,6 @@ jQuery(document).ready(function(){
 	});
 
 	jQuery('table.saved tbody').sortable( {
-		palceholder: 'highlight',
 		update: function( event, ui ) {
 	    jQuery(this).children().each(function(index) {
 			jQuery(this).find('td').last().html(index + 1)
@@ -18,10 +17,10 @@ jQuery(document).ready(function(){
 	});
 
     //For the primary filters
-    jQuery('.elegant_filters .location li').on('click', function(e){
+    jQuery('.elegant_filters li').on('click', function(e){
     	jQuery(this).toggleClass('selected');
     	var filters = [];
-    	jQuery('.elegant_filters .location li.selected').each(function(){
+    	jQuery('.elegant_filters li.selected').each(function(){
     		var val = jQuery(this).attr('data-id');
     		filters.push('.'+val);    		
     	});
@@ -32,7 +31,7 @@ jQuery(document).ready(function(){
 	    	jQuery(filters.join(', ')).show();	    	
     	}     	
     })
-    //For the primary filters
+    /*For the primary filters
     jQuery('.elegant_filters .others li').on('click', function(e){
     	jQuery(this).toggleClass('selected');
     	var filters = [];
@@ -46,11 +45,8 @@ jQuery(document).ready(function(){
     		jQuery('.elegant_list_properties tr.propertyrow').hide();
 	    	jQuery(filters.join('')).show();	    	
     	}     	
-    })
-    
-
-   
-
+    })  
+*/
     //For the feature filters. 
     jQuery('.features_toggle span.button').on('click',function(){
 		
@@ -68,31 +64,29 @@ jQuery(document).ready(function(){
 	});
 
 
-	//Click the proerty row to make it selected. Add it to the list of properties at the top of the list. 
-	// On click again, remove it from the list and move back down to the bottom. 
-	jQuery('tr.propertyrow').on('click',function() {
-		jQuery('table.saved').show();	
+	//Click the proerty row to make it selected then add it to the list of selected properties 
+	jQuery('.elegant_list_properties tr.propertyrow').on('click',function() {
+		jQuery('.saved-container').show();	
 		jQuery(this).toggleClass('rowselected');
-
-
 		var allRows = [];
 		jQuery(".rowselected").each(function(){
 	    	var id = this.id;
 	      	allRows.push(this.id);
 	    });
-	    jQuery(allRows).each(function(){
-	    	
-	    	    
-	    	if (jQuery(this).hasClass('rowselected')) {
-	    		var row = jQuery('#'+this).detach();
-	    		jQuery(row).insertAfter('table.elegant_list_properties tr:first');	
-	    	} else {
-	    		var row = jQuery('#'+this).detach();	    	
-	    		jQuery(row).insertAfter('table.saved tr:first');
-	    	}		
+	    jQuery(allRows).each(function(){	    	
+	    	var row = jQuery('#'+this).detach();	    	
+	    	jQuery(row).insertAfter('table.saved tr:first');
+	    	jQuery(row).addClass('savedrow');
 	    });
-
 	});
+
+	jQuery('tr.savedrow').on('click',function() {				    	
+	    var row = jQuery('#'+this.id).detach();	    	
+	    jQuery(row).insertAfter('table.elegant_list_properties tr:first');	  
+	    jQuery(row).removeClass('rowselected'); 
+	});
+
+
 
 	
 
@@ -108,17 +102,19 @@ jQuery(document).ready(function(){
 		//Get the email form content and creat an array [email/s, title, body]
 		tinyMCE.triggerSave();
 		var newEmailForm = [];
+			var messagetext = jQuery('textarea#emailMessage').val();
 			var email = jQuery('input.email').val();
 			var title = jQuery('input.title').val();
-			var emailMessage = jQuery('textarea#emailMessage').val();
+			var emailMessage = encodeURIComponent(messagetext);
 		newEmailForm.push([email,title,emailMessage]);
 		//console.log(newEmailForm);
 		
 		//Get each selected row and create an array [id,message,price];
 		var properties = [];
 		jQuery('tr.rowselected').each(function(){
+			var notestext = jQuery(this).find('textarea').val();
 			var id = this.id;
-			var message = jQuery(this).find('textarea').val();		
+			var message = encodeURIComponent(notestext);
 			var price = jQuery(this).find('input.price').val();
 			properties.push([this.id,message,price]);
 		});
