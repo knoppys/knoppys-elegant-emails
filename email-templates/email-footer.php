@@ -37,7 +37,7 @@ function elegant_email_footer() { ob_start(); ?>
 					<div class="col num12" style="min-width: 320px;max-width: 600px;width: 598px;width: calc(28000% - 167400px);background-color: transparent;">
 						<div style="background-color: transparent; width: 100% !important;">
 							<!--[if (!mso)&(!IE)]><!-->
-							<div style="border-top: 1px solid #3c799c; border-left: 1px solid #3c799c; border-bottom: 1px solid #3c799c; border-right: 1px solid #3c799c; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
+							<div style="padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
 								<!--<![endif]-->
 								&#160; <!--[if (!mso)&(!IE)]><!-->
 							</div><!--<![endif]-->

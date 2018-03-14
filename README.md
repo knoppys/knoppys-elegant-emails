@@ -1,3 +1,6 @@
+V6.4
+Border removed from email footer
+
 V6.3
 Updated the images in the email template, sorted the drag and drop ordering, cleaned up misc symbols in the meta classes, seperate table for saved properties, saved paragraphs in the notes and message fields. 
 
