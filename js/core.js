@@ -65,7 +65,7 @@ jQuery(document).ready(function(){
 
 
 	//Click the proerty row to make it selected then add it to the list of selected properties 
-	jQuery('.elegant_list_properties tr.propertyrow').on('click',function() {
+	jQuery('tr.propertyrow').on('click',function() {
 		jQuery('.saved-container').show();	
 		jQuery(this).toggleClass('rowselected');
 		var allRows = [];
@@ -80,15 +80,13 @@ jQuery(document).ready(function(){
 	    });
 	});
 
+	/*
 	jQuery('tr.savedrow').on('click',function() {				    	
 	    var row = jQuery('#'+this.id).detach();	    	
 	    jQuery(row).insertAfter('table.elegant_list_properties tr:first');	  
-	    jQuery(row).removeClass('rowselected'); 
+	    jQuery(this).removeClass('rowselected'); 
 	});
-
-
-
-	
+	*/	
 
 	//Stop the property row from toggling when clicking on the inputs. 
 	jQuery('.message-container').on('click', function(e){
