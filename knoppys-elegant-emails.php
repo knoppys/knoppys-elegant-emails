@@ -3,7 +3,7 @@
 Plugin Name:       Knoppys Elegant Emails
 Plugin URI:        https://github.com/knoppys/knoppys-elegant-emails.git
 Description:       This plugin allows the user to curate property recommendation emails, save and send them. For help and support, please contact coda@knoppys.co.uk
-Version:           6.5
+Version:           6.6
 Author:            Knoppys Digital Limited
 License:           GNU General Public License v2
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html

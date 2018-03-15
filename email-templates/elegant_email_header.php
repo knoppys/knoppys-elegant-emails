@@ -151,7 +151,10 @@ function elegant_email_header(){ ob_start(); ?>
 	   .col > div {
 	     margin: 0 auto; }
 	 img.fullwidth {
-	   max-width: 100% !important; } }
+	   max-width: 100% !important; 
+	   width: 100% !important;
+	} 
+}
 
 	</style>
 </head>
@@ -185,11 +188,11 @@ function elegant_email_header(){ ob_start(); ?>
 			</div>
 		</div>
 		<div style="background-color:transparent;">
-			<div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;width: 600px;width: calc(29000% - 179200px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #3c799c;">
+			<div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;width: 600px;width: calc(29000% - 179200px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;">
 				<div style="border-collapse: collapse;display: table;width: 100%;">
 					<!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#3c799c;"><![endif]-->
 					<!--[if (mso)|(IE)]><td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
-					<div class="col num12" style="min-width: 320px;max-width: 600px;width: 600px;width: calc(28000% - 167400px);background-color: #3c799c;">
+					<div class="col num12" style="min-width: 320px;max-width: 600px;width: 600px;width: calc(28000% - 167400px);background-color: #FFFFFF;">
 						<div style="background-color: transparent; width: 100% !important;">
 							<!--[if (!mso)&(!IE)]><!-->
 							<div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;">
@@ -222,7 +225,7 @@ function elegant_email_header(){ ob_start(); ?>
 									<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center"><![endif]-->
 									<div style="line-height:5px;font-size:1px">
 										&#160;
-									</div><img align="center" alt="Elegant Address South of France" border="0" class="center" src="http://elegant-address.com/wp-content/uploads/Elegant-Address-Logo.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 193px" title="Image" width="193"><!--[if mso]></td></tr></table><![endif]-->
+									</div><img align="center" alt="Elegant Address South of France" border="0" class="center" src="http://elegant-address.com/wp-content/uploads/logo.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 350px" title="Image"><!--[if mso]></td></tr></table><![endif]-->
 								</div><!--[if (!mso)&(!IE)]><!-->
 							</div><!--<![endif]-->
 						</div>
