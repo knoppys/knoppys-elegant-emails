@@ -8,7 +8,7 @@ function elegant_email_body($messagtext,$properties){
 	ob_start(); ?>
 
 	<div>
-		<div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;width: 600px;width: calc(29000% - 179200px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;">
+		<div class="block-grid" style="margin: 0 auto;min-width: 320px;max-width: 600px;width: 600px;width: calc(29000% - 179200px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;">
 			<div style="border-collapse: collapse;display: table;width: 100%;">
 
 			<table cellspacing="0" cellpadding="10" class="" width="" style="width:100%;" border-collapse="collapse">
@@ -30,7 +30,7 @@ function elegant_email_body($messagtext,$properties){
 
 			<?php foreach ($properties as $property) { ?>
 			
-		    <table cellspacing="0" cellpadding="10" class="" width="" style="width:100%;" border-collapse="collapse">
+		    <table cellspacing="0" cellpadding="10" class="" width="" style="width:100%;max-width: 600px;" border-collapse="collapse">
 		        <tbody>
 		            <tr>    
 		                <td>            
@@ -40,7 +40,7 @@ function elegant_email_body($messagtext,$properties){
 		                	        	<td colspan="2">
 		                	        		<p style="margin-top:20px;font-size: 12px;line-height: 18px;text-align: left"><a href="<?php echo get_the_permalink($property[0]); ?>" target="_blank" style="color:#bc8536;"><span style="color:#bc8536; font-size: 18px; line-height: 27px; font-weight: bold;margin-top:10px;"><?php echo get_the_title($property[0]); ?></span></a></p>
 			                				<center style="background-color:#efefef; width: 100%; padding-top: 10px;padding-bottom: 10px;margin-bottom:10px;">
-			                					<img class="fullwidth mobilestack" align="center" alt="<?php echo get_the_title($property[0]); ?>" border="0" class="center" src="<?php echo get_the_post_thumbnail_url($property[0], 'large'); ?>" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 350px" title="Image" width="100%">		                	
+			                					<img class="" align="center" alt="<?php echo get_the_title($property[0]); ?>" border="0" class="center" src="<?php echo get_the_post_thumbnail_url($property[0], 'medium'); ?>" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 350px" title="Image">		                	
 			                				</center>
 		                	        	</td>
 		                	        </tr>
