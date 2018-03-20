@@ -21,21 +21,43 @@ jQuery(document).ready(function(){
     jQuery('.elegant_filters ul li').on('click', function (e) {
 	    jQuery(this).toggleClass('selected');
 	    var filtersLocation = [];
-	    var filtersOthers = [];
+	    var filtersPropertytype = [];
+	    var filtersAgentname = [];
+	    var filtersBedrooms = [];
+	    var filtersSaleorrent = [];
 	    jQuery('.elegant_filters ul.location li.selected').each(function () {
 	        var val = jQuery(this).attr('data-id');
 	        filtersLocation.push('.' + val);
 	    });
-	    jQuery('.elegant_filters ul.others li.selected').each(function () {
+	    jQuery('.elegant_filters ul.propertytype li.selected').each(function () {
 	        var val = jQuery(this).attr('data-id');
-	        filtersOthers.push('.' + val);
+	        filtersPropertytype.push('.' + val);
 	    });
-	    console.log(filtersLocation);
-	    console.log(filtersOthers);
+	    jQuery('.elegant_filters ul.agentname li.selected').each(function () {
+	        var val = jQuery(this).attr('data-id');
+	        filtersAgentname.push('.' + val);
+	    });
+	    jQuery('.elegant_filters ul.bedrooms li.selected').each(function () {
+	        var val = jQuery(this).attr('data-id');
+	        filtersBedrooms.push('.' + val);
+	    });
+	    jQuery('.elegant_filters ul.saleorrent li.selected').each(function () {
+	        var val = jQuery(this).attr('data-id');
+	        filtersSaleorrent.push('.' + val);
+	    });
 	    jQuery('.elegant_list_properties tr.propertyrow')
             .hide()
             .filter(filtersLocation.length > 0 ? filtersLocation.join(', ') : '*')
-            .filter(filtersOthers.length > 0 ? filtersOthers.join(', ') : '*').show();
+            .filter(filtersPropertytype.length > 0 ? filtersPropertytype.join(', ') : '*')
+            .filter(filtersAgentname.length > 0 ? filtersAgentname.join(', ') : '*')
+            .filter(filtersBedrooms.length > 0 ? filtersBedrooms.join(', ') : '*')
+            .filter(filtersSaleorrent.length > 0 ? filtersSaleorrent.join(', ') : '*').show();
+
+            console.log(filtersLocation);
+            console.log(filtersPropertytype);
+            console.log(filtersAgentname);
+            console.log(filtersBedrooms);
+            console.log(filtersSaleorrent);
 	})
 
 
