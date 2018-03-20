@@ -27,7 +27,7 @@ jQuery(document).ready(function(){
 	        filtersLocation.push('.' + val);
 	    });
 	    jQuery('.elegant_filters ul.others li.selected').each(function () {
-	        var val = this.textContent.toLowerCase().replace(/([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g, "\\$1");
+	        var val = jQuery(this).attr('data-id');
 	        filtersOthers.push('.' + val);
 	    });
 	    console.log(filtersLocation);
