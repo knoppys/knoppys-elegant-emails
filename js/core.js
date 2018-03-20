@@ -16,21 +16,31 @@ jQuery(document).ready(function(){
 	  }
 	});
 
-    //For the primary filters
-    jQuery('.elegant_filters li').on('click', function(e){
-    	jQuery(this).toggleClass('selected');
-    	var filters = [];
-    	jQuery('.elegant_filters li.selected').each(function(){
-    		var val = jQuery(this).attr('data-id');
-    		filters.push('.'+val);    		
-    	});
-    	if (jQuery(filters).length < 1) {
-    		jQuery('.elegant_list_properties tr.propertyrow').show();
-    	} else {
-    		jQuery('.elegant_list_properties tr.propertyrow').hide();
-	    	jQuery(filters.join(', ')).show();	    	
-    	}     	
-    })
+
+
+    jQuery('.elegant_filters ul li').on('click', function (e) {
+	    jQuery(this).toggleClass('selected');
+	    var filtersLocation = [];
+	    var filtersOthers = [];
+	    jQuery('.elegant_filters ul.location li.selected').each(function () {
+	        var val = jQuery(this).attr('data-id');
+	        filtersLocation.push('.' + val);
+	    });
+	    jQuery('.elegant_filters ul.others li.selected').each(function () {
+	        var val = this.textContent.toLowerCase().replace(/([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g, "\\$1");
+	        filtersOthers.push('.' + val);
+	    });
+	    console.log(filtersLocation);
+	    console.log(filtersOthers);
+	    jQuery('.elegant_list_properties tr.propertyrow')
+            .hide()
+            .filter(filtersLocation.length > 0 ? filtersLocation.join(', ') : '*')
+            .filter(filtersOthers.length > 0 ? filtersOthers.join(', ') : '*').show();
+	})
+
+
+
+
     /*For the primary filters
     jQuery('.elegant_filters .others li').on('click', function(e){
     	jQuery(this).toggleClass('selected');
