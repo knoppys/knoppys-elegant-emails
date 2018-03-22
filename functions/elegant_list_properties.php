@@ -40,119 +40,143 @@ function elegant_list_properties(){
 	
 	
 	?>
+	
+	<div class="propertiesTable">		
+		<div class="tableSearch">
+			<h2>Search Properties</h2>
+			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+		</div>
+		<table id="elegant_list_properties" class="elegant_list_properties" cellspacing="0">	
+				<thead>				
+					<tr class="headerrow">
+						<th>
+							Image
+						</th>
+						<th class="name">
+							Name
+						</th>
+						<th>
+							Location
+						</th>
+						<th>
+							Type
+						</th>
+						<th>
+							Sale or Rent
+						</th>
+						<th>
+							Agent Name
+						</th>
+						<th>
+							Number of Beds
+						</th>
+						<th>
+							Spa
+						</th>					
+						<th>
+							Heated Pool
+						</th>
+						<th>
+							Beach Access
+						</th>
+						<th>
+							Air Con Full
+						</th>
+						<th>
+							Heli Pad
+						</th>					
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>
+							Image
+						</th>
+						<th class="name">
+							Name
+						</th>
+						<th>
+							Location
+						</th>
+						<th>
+							Type
+						</th>
+						<th>
+							Sale or Rent
+						</th>
+						<th>
+							Agent Name
+						</th>
+						<th>
+							Number of Beds
+						</th>
+						<th>
+							Spa
+						</th>					
+						<th>
+							Heated Pool
+						</th>
+						<th>
+							Beach Access
+						</th>
+						<th>
+							Air Con Full
+						</th>
+						<th>
+							Heli Pad
+						</th>	
+					</tr>
+				</tfoot>
+				
+				<?php			
+				
+				//This returns all the properties for a new email and the remaining properties form an existing one.
+				foreach ($properties as $property) { 
+					$meta = get_post_meta($property->ID);?>				
+					<tr id="<?php echo $property->ID; ?>" class="propertyrow <?php echo strtolower(meta_class($property->ID)); ?> <?php echo property_locations_classes($property->ID); ?>">
+						<td class=""><img src="<?php echo get_the_post_thumbnail_url($property->ID, array(75,75));?>"></td>
+						<td class="">
+						<a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?></a>
+							<div class="message-container">
+								<textarea class="message" placeholder="Your Messgae"></textarea>
+								<input type="text" name="price" class="price" placeholder="Price">
+							</div>
+						</td>
+						<td class=""><?php echo property_locations($property->ID); ?></td>
+						<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
+						<td class=""><?php if(isset($meta['sale_or_rent'][0])){echo $meta['sale_or_rent'][0];} ?></td>
+						<td class=""><?php if(isset($meta['agent_name'][0])){echo $meta['agent_name'][0];} ?></td>
+						<td class=""><?php if(isset($meta['number_of_beds'][0])){echo $meta['number_of_beds'][0];} ?></td>
+						<td class=""><?php if(isset($meta['spa'][0])){echo meta_check($meta['spa'][0]);} ?></td>
+						<td class=""><?php if(isset($meta['heated_pool'][0])){echo meta_check($meta['heated_pool'][0]);} ?></td>
+						<td class=""><?php if(isset($meta['beach_access'][0])){echo meta_check($meta['beach_access'][0]);} ?></td>	
+						<td class=""><?php if(isset($meta['aircon_full'][0])){echo meta_check($meta['aircon_full'][0]);} ?></td>
+						<td class=""><?php if(isset($meta['heli_pad'][0])){echo meta_check($meta['heli_pad'][0]);} ?></td>					
 
-	<table class="elegant_list_properties">	
-		
-			<thead>
-				<tr class="headerrow">
-					<th>
-						Image
-					</th>
-					<th class="name">
-						Name
-					</th>
-					<th>
-						Location
-					</th>
-					<th>
-						Type
-					</th>
-					<th>
-						Sale or Rent
-					</th>
-					<th>
-						Agent Name
-					</th>
-					<th>
-						Number of Beds
-					</th>
-					<th>
-						Spa
-					</th>					
-					<th>
-						Heated Pool
-					</th>
-					<th>
-						Beach Access
-					</th>
-					<th>
-						Air Con Full
-					</th>
-					<th>
-						Heli Pad
-					</th>					
-				</tr>
-			</thead>
-			<tfoot>
-				<tr>
-					<th>
-						Image
-					</th>
-					<th class="name">
-						Name
-					</th>
-					<th>
-						Location
-					</th>
-					<th>
-						Type
-					</th>
-					<th>
-						Sale or Rent
-					</th>
-					<th>
-						Agent Name
-					</th>
-					<th>
-						Number of Beds
-					</th>
-					<th>
-						Spa
-					</th>					
-					<th>
-						Heated Pool
-					</th>
-					<th>
-						Beach Access
-					</th>
-					<th>
-						Air Con Full
-					</th>
-					<th>
-						Heli Pad
-					</th>	
-				</tr>
-			</tfoot>
-			
-			<?php			
-			
-			//This returns all the properties for a new email and the remaining properties form an existing one.
-			foreach ($properties as $property) { 
-				$meta = get_post_meta($property->ID);?>				
-				<tr id="<?php echo $property->ID; ?>" class="propertyrow <?php echo strtolower(meta_class($property->ID)); ?> <?php echo property_locations_classes($property->ID); ?>">
-					<td class=""><img src="<?php echo get_the_post_thumbnail_url($property->ID, array(75,75));?>"></td>
-					<td class="">
-					<a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?></a>
-						<div class="message-container">
-							<textarea class="message" placeholder="Your Messgae"></textarea>
-							<input type="text" name="price" class="price" placeholder="Price">
-						</div>
-					</td>
-					<td class=""><?php echo property_locations($property->ID); ?></td>
-					<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
-					<td class=""><?php if(isset($meta['sale_or_rent'][0])){echo $meta['sale_or_rent'][0];} ?></td>
-					<td class=""><?php if(isset($meta['agent_name'][0])){echo $meta['agent_name'][0];} ?></td>
-					<td class=""><?php if(isset($meta['number_of_beds'][0])){echo $meta['number_of_beds'][0];} ?></td>
-					<td class=""><?php if(isset($meta['spa'][0])){echo meta_check($meta['spa'][0]);} ?></td>
-					<td class=""><?php if(isset($meta['heated_pool'][0])){echo meta_check($meta['heated_pool'][0]);} ?></td>
-					<td class=""><?php if(isset($meta['beach_access'][0])){echo meta_check($meta['beach_access'][0]);} ?></td>	
-					<td class=""><?php if(isset($meta['aircon_full'][0])){echo meta_check($meta['aircon_full'][0]);} ?></td>
-					<td class=""><?php if(isset($meta['heli_pad'][0])){echo meta_check($meta['heli_pad'][0]);} ?></td>					
-
-				</tr>
-			<?php } ?>
-		</tr>
-	</table>
+					</tr>
+				<?php } ?>
+			</tr>
+		</table>
+	</div>
+	<script>
+	function myFunction() {
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myInput");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("elegant_list_properties");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+	    td = tr[i].getElementsByTagName("td")[0];
+	    if (td) {
+	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	        tr[i].style.display = "";
+	      } else {
+	        tr[i].style.display = "none";
+	      }
+	    }       
+	  }
+	}
+	</script>
 	
 	<?php $content = ob_get_clean();
 	return $content;

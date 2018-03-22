@@ -54,12 +54,14 @@ function elegant_email_body($messagtext,$properties){
 		            						<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 1.5; font-weight: normal;">Location: <?php location($property[0]); ?></span></p>
 		            						<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 1.5; font-weight: normal;">Reference: <?php echo get_post_meta($property[0],'reference_code', true); ?></span></p>	
 		            						<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 16px; line-height: 1.5; font-weight: bold;">Price: <?php echo $property[2]; ?></span></p>
+		            						<p style="padding:5px;color:#ffffff;background-color:#5289a8;margin: 0;font-size: 14px;line-height: 18px;text-align: center;"><a style="color:#ffffff;" target="_blank" href="<?php echo get_site_url(); ?>/download-brochure/?brochure_id=<?php echo $property[0]; ?>"><span style="color:#ffffff;padding:5px;color:font-size: 16px; line-height: 1.5; font-weight: bold;">Download Our Brochure</span></a></p>       			
 		            					</td>	                	                
 	                	            </tr>
 	                	        </tbody>
 	                	    </table>      	
 		              		
-		            		<div style="margin-top:10px;border-bottom:1px solid #d2d2d2;padding-bottom: 10px">		            			
+		            		<div style="margin-top:10px;border-bottom:1px solid #d2d2d2;padding-bottom: 10px">		     
+		            			
 		            			<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 1.5; font-weight: normal;"><?php echo nl2br(rawurldecode($property[1])); ?></span></p>
 		            		</div>	
 		            	</td>

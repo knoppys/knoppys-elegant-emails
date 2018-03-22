@@ -1,22 +1,21 @@
 /*Site core*/
 jQuery(document).ready(function(){
-    jQuery('.elegant_list_properties').DataTable( {
+	/*
+    jQuery('table.elegant_list_properties').DataTable( {
     	 aLengthMenu: [
 	        [25, 50, 100, 200, -1],
 	        [25, 50, 100, 200, "All"]
 	    ],
 	    iDisplayLength: -1	
 	});
-
-	jQuery('table.saved tbody').sortable( {
+*/
+	jQuery( "table.saved tbody" ).sortable( {
 		update: function( event, ui ) {
 	    jQuery(this).children().each(function(index) {
-			jQuery(this).find('td').last().html(index + 1)
+				jQuery(this).find('td').last().html(index + 1)
 	    });
 	  }
 	});
-
-
 
     jQuery('.elegant_filters ul li').on('click', function (e) {
 	    jQuery(this).toggleClass('selected');
@@ -97,28 +96,30 @@ jQuery(document).ready(function(){
 
 
 	//Click the proerty row to make it selected then add it to the list of selected properties 
-	jQuery('tr.propertyrow').on('click',function() {
-		jQuery('.saved-container').show();	
+	jQuery('.elegant_list_properties tr.propertyrow').on('click',function() {
+		//jQuery('.saved-container').show();	
 		jQuery(this).toggleClass('rowselected');
 		var allRows = [];
 		jQuery(".rowselected").each(function(){
 	    	var id = this.id;
 	      	allRows.push(this.id);
-	    });
-	    jQuery(allRows).each(function(){	    	
-	    	var row = jQuery('#'+this).detach();	    	
+	      	var row = jQuery('#'+this.id).detach();	    	
 	    	jQuery(row).insertAfter('table.saved tr:first');
-	    	jQuery(row).addClass('savedrow');
-	    });
+	    });	    
 	});
 
-	/*
-	jQuery('tr.savedrow').on('click',function() {				    	
-	    var row = jQuery('#'+this.id).detach();	    	
-	    jQuery(row).insertAfter('table.elegant_list_properties tr:first');	  
-	    jQuery(this).removeClass('rowselected'); 
+	jQuery('.saved tr.propertyrow').on('click',function() {
+		//jQuery('.saved-container').show();	
+		jQuery(this).toggleClass('rowselected');
+		var allRows = [];
+		jQuery(".saved tr.propertyrow:not('rowselected')").each(function(){
+	    	var id = this.id;
+	      	allRows.push(this.id);
+	      	var row = jQuery('#'+this.id).detach();	    	
+	    	jQuery(row).insertAfter('table.elegant_list_properties tr:first');
+	    });	    
 	});
-	*/	
+
 
 	//Stop the property row from toggling when clicking on the inputs. 
 	jQuery('.message-container').on('click', function(e){
