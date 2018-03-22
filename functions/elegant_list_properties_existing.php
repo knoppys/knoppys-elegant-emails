@@ -12,6 +12,11 @@ function elegant_list_properties_existing(){
 	
 	ob_start(); ?>
 
+	<div class="propertiesTable">		
+	<div class="tableSearch">
+		<h2>Search Properties</h2>
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+	</div>
 	<table class="elegant_list_properties existing">
 		
 			<thead>
@@ -65,6 +70,26 @@ function elegant_list_properties_existing(){
 			<?php } ?>
 		</tr>
 	</table>
+	</div>
+	<script>
+	function myFunction() {
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myInput");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("elegant_list_properties");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+	    td = tr[i].getElementsByTagName("td")[0];
+	    if (td) {
+	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	        tr[i].style.display = "";
+	      } else {
+	        tr[i].style.display = "none";
+	      }
+	    }       
+	  }
+	}
+	</script>
 
 	<?php $content = ob_get_clean();
 	return $content;

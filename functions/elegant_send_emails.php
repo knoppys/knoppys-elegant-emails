@@ -51,9 +51,9 @@ Send the email out and generate a response
 *******************************************/
 function elegeantSend($to,$messagetext,$properties){
 
-	$message = elegant_email_header();
-    $message .= elegant_email_body($messagetext,$properties);
-    $message .= elegant_email_footer();
+	//$message = elegant_email_header();
+    $message = elegant_email_body($messagetext,$properties);
+    //$message .= elegant_email_footer();
 
     $headers[] = 'Content-Type: text/html; charset=UTF-8';
     $headers[] = 'From: Elegant Address <enquiries@elegant-address.com>';

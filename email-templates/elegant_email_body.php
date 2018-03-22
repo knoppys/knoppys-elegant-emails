@@ -5,75 +5,221 @@ Create an email body and output each property from the $propertites array
 
 function elegant_email_body($messagtext,$properties){ 
 
-	ob_start(); ?>
+  ob_start(); ?>
 
-	<div>
-		<div class="block-grid" style="margin: 0 auto;min-width: 320px;max-width: 600px;width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;">
-			<div style="border-collapse: collapse;display: table;width: 100%;">
 
-			<table cellspacing="0" cellpadding="10" class="" width="" style="width:100%;" border-collapse="collapse">
-		        <tbody>
-		            <tr>    
-		                <td class="mobilestack">
-		                	<center>
-		                		<p style="margin: 0;font-size: 16px;line-height: 18px;text-align: center"><span style="font-size: 16px; line-height: 1.5; font-weight: bold;"><a href="http://www.elegant-address.com" style="color: #bc8536;"><span style="color:#bc8536">www.elegant-address.com</span></a></span></p>
-		                		<p style="margin: 0;font-size: 16px;line-height: 18px;text-align: center"><span style="font-size: 16px; line-height: 1.5; font-weight: bold;"><a href="mailto:enquiries@elegant-address.com" style="color: #bc8536;"><span style="color:#bc8536">enquiries@elegant-address.com</span></a></span></p>	
-		                		<p style="margin: 0;font-size: 16px;line-height: 18px;text-align: center"><span style="font-size: 16px; line-height: 1.5; font-weight: bold;"><a href="tel:441244629963" style="color: #bc8536;"><span style="color:#bc8536">+44 (0) 1244 629 963</span></a></span></p>	
-		                	</center>
-		                	<div style="margin-top:10px;padding-bottom: 10px">
-	                    		<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 1.5; font-weight: normal;"><?php echo $messagtext; ?></span></p>	
-	                    	</div>
-		            	</td>
-		            </tr>
-		        </tbody>
-		    </table> 	
+<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <title></title><!--[if !mso]><!== -->
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"><!--<![endif]-->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <style type="text/css">
+   #outlook a { padding: 0; }  .ReadMsgBody { width: 100%; }  .ExternalClass { width: 100%; }  .ExternalClass * { line-height:100%; }  body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }  table, td { border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }  img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }  p { display: block; margin: 13px 0; }
+  </style><!--[if !mso]><!-->
+  <style type="text/css">
+   @media only screen and (max-width:480px) {    @-ms-viewport { width:320px; }    @viewport { width:320px; }  }
+  </style><!--<![endif]--><!--[if mso]><xml>  <o:OfficeDocumentSettings>    <o:AllowPNG/>    <o:PixelsPerInch>96</o:PixelsPerInch>  </o:OfficeDocumentSettings></xml><![endif]--><!--[if lte mso 11]><style type="text/css">  .outlook-group-fix {    width:100% !important;  }</style><![endif]--><!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+  <style type="text/css">
+         @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);    
+  </style><!--<![endif]-->
+  <style type="text/css">
+   @media only screen and (min-width:480px) {    .mj-column-per-100 { width:100%!important; }.mj-column-per-50 { width:50%!important; }  }
+  </style>
+</head>
+<body style="background: #FFFFFF;">
+  <div class="mj-container" style="background-color:#FFFFFF;">
+    <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">        <tr>          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size:0px;width:100%;">
+        <tbody>
+          <tr>
+            <td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:9px 0px 9px 0px;">
+              <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0">        <tr>          <td style="vertical-align:top;width:600px;">      <![endif]-->
+              <div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="word-wrap:break-word;font-size:0px;padding:18px 18px 18px 18px;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                          <tbody>
+                            <tr>
+                              <td style="width:384px;"><img alt="" height="auto" src="http://elegant-address.com/wp-content/uploads/logo.png" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" title="" width="384"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><!--[if mso | IE]>      </td></tr></table>      <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!--[if mso | IE]>      </td></tr></table>      <![endif]--><!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">        <tr>          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size:0px;width:100%;">
+        <tbody>
+          <tr>
+            <td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:9px 0px 9px 0px;">
+              <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0">        <tr>          <td style="vertical-align:top;width:600px;">      <![endif]-->
+              <div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;">
+                <p style="margin: 0;font-size: 16px;line-height: 18px;text-align: center"><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="http://www.elegant-address.com" rel="external nofollow noopener noreferrer" style="color: #bc8536" tabindex="-1" target="_blank"><span style="color: #bc8536">www.elegant-address.com</span></a></span></p>
+                <p style="margin: 0;font-size: 16px;line-height: 18px;text-align: center"><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="mailto:enquiries@elegant-address.com" rel="external nofollow noopener noreferrer" style="color: #bc8536" tabindex="-1" target="_blank"><span style="color: #bc8536">enquiries@elegant-address.com</span></a></span></p>
+                <p style="margin: 0;font-size: 16px;line-height: 18px;text-align: center"><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a data-x-broken-href="tel:441244629963" href="javascript:false" rel="external nofollow noopener noreferrer" style="color: #bc8536" tabindex="-1" target="_blank"><span style="color: #bc8536">+44 (0) 1244 629 963</span></a></span></p>
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody></tbody>
+                </table>
+              </div><!--[if mso | IE]>      </td></tr></table>      <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!--[if mso | IE]>      </td></tr></table>      <![endif]--><!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">        <tr>          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">      <![endif]-->
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size:0px;width:100%;">
+      <tbody>
+        <tr>
+          <td>
+            <div style="margin:0px auto;max-width:600px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size:0px;width:100%;">
+                <tbody>
+                  <tr>
+                    <td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:14px 0px 14px 0px;">
+                      <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0">        <tr>          <td style="vertical-align:top;width:600px;">      <![endif]-->
+                      <div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
+                                <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
+                                  <p><?php echo $messagtext; ?></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div><!--[if mso | IE]>      </td></tr></table>      <![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table><!--[if mso | IE]>      </td></tr></table>      <![endif]-->
 
-			<?php foreach ($properties as $property) { ?>
-			
-		    <table cellspacing="0" cellpadding="10" class="" width="" style="width:100%;max-width: 600px;" border-collapse="collapse">
-		        <tbody>
-		            <tr>    
-		                <td>            
-			               <table cellspacing="0" cellpadding="0" class="" width="" style="width:100%;background: #fff;" border-collapse="collapse">
-	                	        <tbody>
-		                	        <tr>
-		                	        	<td colspan="2">
-		                	        		<p style="margin-top:20px;font-size: 12px;line-height: 18px;text-align: left"><a href="<?php echo get_the_permalink($property[0]); ?>" target="_blank" style="color:#bc8536;"><span style="color:#bc8536; font-size: 18px; line-height: 27px; font-weight: bold;margin-top:10px;"><?php echo get_the_title($property[0]); ?></span></a></p>
-			                				<center style="background-color:#efefef; width: 100%; padding-top: 10px;padding-bottom: 10px;margin-bottom:10px;">
-			                					<img class="" align="center" alt="<?php echo get_the_title($property[0]); ?>" border="0" class="center" src="<?php echo get_the_post_thumbnail_url($property[0], 'large'); ?>" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 580px" title="Image">		                	
-			                				</center>
-		                	        	</td>
-		                	        </tr>
-		                	        <tr> 
-		                	           	<td valign="center" class="mobilestack">	                	                	
-	                	                	<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 16px;"><?php echo get_post_meta($property[0],'BriefDescription', true); ?></span></p>		                	                	
-	                	                </td>    	                
-	                	                <td valign="center" class="mobilestack">	
-	                	                	<div style="height: 10px;display: block;"></div>                	                		                	                    
-	                	                	<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 1.5; font-weight: normal;">Property Type: <?php echo get_post_meta($property[0],'type_name', true); ?></span></p>
-		            						<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 1.5; font-weight: normal;">Location: <?php location($property[0]); ?></span></p>
-		            						<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 1.5; font-weight: normal;">Reference: <?php echo get_post_meta($property[0],'reference_code', true); ?></span></p>	
-		            						<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 16px; line-height: 1.5; font-weight: bold;">Price: <?php echo $property[2]; ?></span></p>
-		            						<p style="padding:5px;color:#ffffff;background-color:#5289a8;margin: 0;font-size: 14px;line-height: 18px;text-align: center;"><a style="color:#ffffff;" target="_blank" href="<?php echo get_site_url(); ?>/download-brochure/?brochure_id=<?php echo $property[0]; ?>"><span style="color:#ffffff;padding:5px;color:font-size: 16px; line-height: 1.5; font-weight: bold;">Download Our Brochure</span></a></p>       			
-		            					</td>	                	                
-	                	            </tr>
-	                	        </tbody>
-	                	    </table>      	
-		              		
-		            		<div style="margin-top:10px;border-bottom:1px solid #d2d2d2;padding-bottom: 10px">		     
-		            			
-		            			<p style="margin: 0;font-size: 14px;line-height: 18px;text-align: left"><span style="font-size: 14px; line-height: 1.5; font-weight: normal;"><?php echo nl2br(rawurldecode($property[1])); ?></span></p>
-		            		</div>	
-		            	</td>
-		            </tr>
-		        </tbody>
-		    </table> 			
-					
-			<?php } ?>
 
-			</div>
-		</div>
-	</div>
+<?php foreach ($properties as $property) { ?>
+    <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">        <tr>          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size:0px;width:100%;">
+        <tbody>
+          <tr>
+            <td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:9px 0px 9px 0px;">
+              <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0">        <tr>          <td style="vertical-align:top;width:600px;">      <![endif]-->
+              <div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
+                        <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
+                          <p><a href="<?php echo get_the_permalink($property[0]); ?>" target="_blank" style="color:#bc8536;"><span style="color:#bc8536; font-size: 18px; line-height: 27px; font-weight: bold;margin-top:10px;"><?php echo get_the_title($property[0]); ?></span></a></p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="word-wrap:break-word;font-size:0px;padding:0px 0px 0px 0px;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                          <tbody>
+                            <tr>
+                              <td style="width:600px;padding:20px;"><img alt="" height="auto" src="<?php echo get_the_post_thumbnail_url($property[0], 'large'); ?>" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" title="" width="600"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><!--[if mso | IE]>      </td></tr></table>      <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!--[if mso | IE]>      </td></tr></table>      <![endif]--><!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">        <tr>          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size:0px;width:100%;">
+        <tbody>
+          <tr>
+            <td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:9px 0px 9px 0px;">
+              <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0">        <tr>          <td style="vertical-align:top;width:300px;">      <![endif]-->
+              <div class="mj-column-per-50 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:50%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
+                        <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
+                          <p><?php echo get_post_meta($property[0],'BriefDescription', true); ?></p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><!--[if mso | IE]>      </td><td style="vertical-align:top;width:300px;">      <![endif]-->
+              <div class="mj-column-per-50 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:50%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
+                        <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
+                          	<p>Property Type: <?php echo get_post_meta($property[0],'type_name', true); ?><br>
+                            Location: <?php location($property[0]); ?><br>
+                            Reference: <?php echo get_post_meta($property[0],'reference_code', true); ?><br> 
+                            <span style="font-weight:bold;">Price: <?php echo $property[2]; ?></span></p>
+                            <p style="padding:5px;color:#ffffff;background-color:#5289a8;margin: 0;font-size: 14px;line-height: 18px;text-align: center;"><a style="color:#ffffff;" target="_blank" href="<?php echo get_site_url(); ?>/download-brochure/?brochure_id=<?php echo $property[0]; ?>"><span style="color:#ffffff;padding:5px;color:font-size: 16px; line-height: 1.5; font-weight: bold;">Download Our Brochure</span></a></p>            
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><!--[if mso | IE]>      </td></tr></table>      <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!--[if mso | IE]>      </td></tr></table>      <![endif]--><!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">        <tr>          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">      <![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size:0px;width:100%;">
+        <tbody>
+          <tr>
+            <td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:9px 0px 9px 0px;">
+              <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0">        <tr>          <td style="vertical-align:top;width:600px;">      <![endif]-->
+              <div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
+                        <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
+                          <p><?php echo nl2br(rawurldecode($property[1])); ?></p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><!--[if mso | IE]>      </td></tr></table>      <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!--[if mso | IE]>      </td></tr></table>      <![endif]-->
+    <?php } ?>
+
+  </div>
+</body>
+</html>
 
 <?php $content = ob_get_clean();
 return $content;
@@ -83,12 +229,12 @@ return $content;
 //Get the properties location term / terms from the location taxonomy
 function location($id){
 
-	$terms = get_the_terms($id,'locations');
-	foreach ($terms as $term) {
-		echo $term->name;
-		if (count($terms) > 1){
-			echo ', ';
-		}
-	}
+  $terms = get_the_terms($id,'locations');
+  foreach ($terms as $term) {
+    echo $term->name;
+    if (count($terms) > 1){
+      echo ', ';
+    }
+  }
 
 }
