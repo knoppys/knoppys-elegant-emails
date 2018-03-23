@@ -52,7 +52,7 @@ function elegant_filters(){
 				<ul class="saleorrent others" multiple>
 					<?php $meta_values = get_meta_values( 'sale_or_rent', 'properties' ); ?>				
 					<?php foreach ($meta_values as $meta_value) { ?>
-						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value)); ?>"><?php echo $meta_value; ?> Beds</li>
+						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value)); ?>"><?php echo $meta_value; ?></li>
 					<?php } ?>
 				</ul>	
 			</td>
