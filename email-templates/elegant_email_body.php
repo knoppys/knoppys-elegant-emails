@@ -66,12 +66,21 @@ function elegant_email_body($messagtext,$properties){
           <tr>
             <td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:9px 0px 9px 0px;">
               <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0">        <tr>          <td style="vertical-align:top;width:600px;">      <![endif]-->
-              <div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;">
-                <p style="margin: 0;font-size: 16px;line-height: 18px;text-align: center"><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="http://www.elegant-address.com" rel="external nofollow noopener noreferrer" style="color: #bc8536" tabindex="-1" target="_blank"><span style="color: #bc8536">www.elegant-address.com</span></a></span></p>
-                <p style="margin: 0;font-size: 16px;line-height: 18px;text-align: center"><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="mailto:enquiries@elegant-address.com" rel="external nofollow noopener noreferrer" style="color: #bc8536" tabindex="-1" target="_blank"><span style="color: #bc8536">enquiries@elegant-address.com</span></a></span></p>
-                <p style="margin: 0;font-size: 16px;line-height: 18px;text-align: center"><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a data-x-broken-href="tel:441244629963" href="javascript:false" rel="external nofollow noopener noreferrer" style="color: #bc8536" tabindex="-1" target="_blank"><span style="color: #bc8536">+44 (0) 1244 629 963</span></a></span></p>
+              <div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;">                
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                  <tbody></tbody>
+                  <tbody>
+                    <tr>
+                      <tr align="center">
+                        <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
+                          <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:center;">
+                          <p><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="http://www.elegant-address.com" style="color: #bc8536" target="_blank"><span style="color: #bc8536">www.elegant-address.com</span></a></span></p>
+                          <p><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="mailto:enquiries@elegant-address.com" style="color: #bc8536" target="_blank"><span style="color: #bc8536">enquiries@elegant-address.com</span></a></span></p>
+                          <p><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="tel:441244629963" style="color: #bc8536" target="_blank"><span style="color: #bc8536">+44 (0) 1244 629 963</span></a></span></p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tr>
+                  </tbody>
                 </table>
               </div><!--[if mso | IE]>      </td></tr></table>      <![endif]-->
             </td>
@@ -136,7 +145,7 @@ function elegant_email_body($messagtext,$properties){
                         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                           <tbody>
                             <tr>
-                              <td style="width:600px;padding:20px;"><img alt="" height="auto" src="<?php echo get_the_post_thumbnail_url($property[0], 'large'); ?>" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" title="" width="600"></td>
+                              <td style="width:600px;padding:10px;"><img alt="" width="100%" height="auto" src="<?php echo get_the_post_thumbnail_url($property[0], 'large'); ?>" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;"></td>
                             </tr>
                           </tbody>
                         </table>
@@ -179,7 +188,7 @@ function elegant_email_body($messagtext,$properties){
                             Location: <?php location($property[0]); ?><br>
                             Reference: <?php echo get_post_meta($property[0],'reference_code', true); ?><br> 
                             <span style="font-weight:bold;">Price: <?php echo $property[2]; ?></span></p>
-                            <p style="padding:5px;color:#ffffff;background-color:#5289a8;margin: 0;font-size: 14px;line-height: 18px;text-align: center;"><a style="color:#ffffff;" target="_blank" href="<?php echo get_site_url(); ?>/download-brochure/?brochure_id=<?php echo $property[0]; ?>"><span style="color:#ffffff;padding:5px;color:font-size: 16px; line-height: 1.5; font-weight: bold;">Download Our Brochure</span></a></p>            
+                            <p><a style="color:#bc8536;" target="_blank" href="<?php echo get_site_url(); ?>/download-brochure/?brochure_id=<?php echo $property[0]; ?>"><span style="color:#bc8536;padding:5px;color:font-size: 16px; line-height: 1.5; font-weight: bold;">Download Our Brochure</span></a></p>            
                         </div>
                       </td>
                     </tr>
