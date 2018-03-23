@@ -23,16 +23,13 @@ function elegant_filters(){
 						<li data-id="<?php echo 'term_'.$term->term_id; ?>"><?php echo $term->name; ?></li>
 					<?php } ?>
 				</ul>
-			</td>
+			</td>			
 			<td valign="top">
-				<ul class="propertytype others" multiple>					
-					<li data-id="villa">Villa</li>		
-					<li data-id="hotel">Hotel</li>					
-					<li data-id="hotelVillas">Hotel Villas</li>	
-					<li data-id="apartment">Apartment</li>		
-					<li data-id="private">Private</li>	
-					<li data-id="villa&ApartmentSales">Villa & Apartment Sales</li>	
-					<li data-id="newevelopments">New Developments</li>	
+				<ul class="propertytype others" multiple>
+					<?php $meta_values = get_meta_values( 'type_name', 'properties' );	?>				
+					<?php foreach ($meta_values as $meta_value) { ?>
+						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value)); ?>"><?php echo $meta_value; ?></li>
+					<?php } ?>
 				</ul>
 			</td>									
 			<td valign="top">
@@ -52,10 +49,12 @@ function elegant_filters(){
 				</ul>		
 			</td>	
 			<td valign="top">				
-				<ul class="saleorrent others" multiple>					
-					<li data-id="sale">Sale</li>		
-					<li data-id="rental">Rental</li>							
-				</ul>
+				<ul class="saleorrent others" multiple>
+					<?php $meta_values = get_meta_values( 'sale_or_rent', 'properties' ); ?>				
+					<?php foreach ($meta_values as $meta_value) { ?>
+						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value.'beds')); ?>"><?php echo $meta_value; ?> Beds</li>
+					<?php } ?>
+				</ul>	
 			</td>
 		</tr>
 		<tr>
