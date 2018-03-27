@@ -46,7 +46,7 @@ function elegant_email_body($messagtext,$properties){
                         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                           <tbody>
                             <tr>
-                              <td style="width:384px;"><img alt="" height="auto" src="http://elegant-address.com/wp-content/uploads/logo.png" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" title="" width="384"></td>
+                              <td style="width:384px;"><img alt="" height="auto" src="<?php /*Knoppys Elegant Variations Plugin*/ echo variations_email_logo(); ?>" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" title="" width="384"></td>
                             </tr>
                           </tbody>
                         </table>
@@ -72,11 +72,10 @@ function elegant_email_body($messagtext,$properties){
                     <tr>
                       <tr align="center">
                         <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
-                          <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:center;">
-                          <p><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="http://www.elegant-address.com" style="color: #bc8536" target="_blank"><span style="color: #bc8536">www.elegant-address.com</span></a></span></p>
-                          <p><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="mailto:enquiries@elegant-address.com" style="color: #bc8536" target="_blank"><span style="color: #bc8536">enquiries@elegant-address.com</span></a></span></p>
-                          <p><span style="font-size: 16px;line-height: 1.5;font-weight: bold"><a href="tel:441244629963" style="color: #bc8536" target="_blank"><span style="color: #bc8536">+44 (0) 1244 629 963</span></a></span></p>
-                          </div>
+                          <?php 
+                          //The code for this function is located in the plugin Knoppys Elegant Variations
+                          echo variations_contact_details(); 
+                          ?>
                         </td>
                       </tr>
                     </tr>
