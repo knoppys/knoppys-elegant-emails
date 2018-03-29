@@ -26,7 +26,9 @@ function elegant_email_body($messagtext,$properties){
          @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);    
   </style><!--<![endif]-->
   <style type="text/css">
+  ul {margin:0px;padding: 0px;}
    @media only screen and (min-width:480px) {    .mj-column-per-100 { width:100%!important; }.mj-column-per-50 { width:50%!important; }  }
+  }
   </style>
 </head>
 <body style="background: #FFFFFF;">

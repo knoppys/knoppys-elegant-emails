@@ -64,24 +64,10 @@ function elegant_filters(){
 			<td valign="top" class="features_toggle">
 				<h4>Property Features</h4>
 				<ul class="features others">
-					<li data-id="panoramic_sea_view">Panoramic Sea View</li>
-					<li data-id="sea_view">Sea View</li>
-					<li data-id="walk_to_beach">Walk To Beach</li>
-					<li data-id="walk_to_shop">Walk To Shop</li>
-					<li data-id="aircon_full">Aircon Full</li>
-					<li data-id="heated_pool">Heated Pool</li>
-					<li data-id="Guardian">Guardian</li>
-					<li data-id="spa">Spa</li>
-					<li data-id="gym">Gym</li>
-					<li data-id="beach_access">Beach Access</li>
-					<li data-id="heli_pad">Heli Pad</li>
-					<li data-id="golf">Golf</li>
-					<li data-id="water_front">Water Front</li>
-					<li data-id="skytv">Sky TV</li>
-					<li data-id="wifi">WiFi</li>
-					<li data-id="Parking">Parking</li>
-					<li data-id="small_sea_view">Small Sea View</li>
-					<li data-id="indoor_pool">Indoor Pool</li>
+					<?php 
+					//Function located in Knoppys Elegant Variations Plugin
+					variations_featrues(get_host()); 
+					?>
 				</ul>
 			</td>
 		</tr>

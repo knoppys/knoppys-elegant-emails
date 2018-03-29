@@ -19,12 +19,14 @@ jQuery(document).ready(function(){
 
     jQuery('.elegant_filters ul li').on('click', function (e) {
 	    jQuery(this).toggleClass('selected');
+
 	    var filtersLocation = [];
 	    var filtersPropertytype = [];
 	    var filtersAgentname = [];
 	    var filtersBedrooms = [];
 	    var filtersSaleorrent = [];
 	    var filtersfeatures = [];
+
 	    jQuery('.elegant_filters ul.location li.selected').each(function () {
 	        var val = jQuery(this).attr('data-id');
 	        filtersLocation.push('.' + val);
@@ -47,7 +49,7 @@ jQuery(document).ready(function(){
 	    });
 	    jQuery('.elegant_filters ul.features li.selected').each(function () {
 	        var val = jQuery(this).attr('data-id');
-	        filtersSaleorrent.push('.' + val);
+	        filtersfeatures.push('.' + val);
 	    });
 	    jQuery('.elegant_list_properties tr.propertyrow')
             .hide()
@@ -57,6 +59,13 @@ jQuery(document).ready(function(){
             .filter(filtersBedrooms.length > 0 ? filtersBedrooms.join(', ') : '*')
             .filter(filtersSaleorrent.length > 0 ? filtersSaleorrent.join(', ') : '*')
             .filter(filtersfeatures.length > 0 ? filtersfeatures.join(', ') : '*').show();
+
+        console.log(filtersLocation);
+        console.log(filtersPropertytype);
+        console.log(filtersAgentname);
+        console.log(filtersBedrooms);
+        console.log(filtersSaleorrent);
+        console.log(filtersfeatures);
 	})
 
 
@@ -78,22 +87,6 @@ jQuery(document).ready(function(){
     	}     	
     })  
 */
-    //For the feature filters. 
-    jQuery('.features_toggle span.button').on('click',function(){
-		
-	    jQuery(this).toggleClass('buttonSelected');
-	    
-	    var allFeature = [];
-	    jQuery(".features_toggle span.button.buttonSelected").each(function(){
-	    	var id = this.id;
-	      	allFeature.push('.'+this.id);
-	    });
-
-	   	jQuery('.elegant_list_properties tr').show();
-	    jQuery(allFeature.join(", ")).hide();
-	    
-	});
-
 
 	//Click the proerty row to make it selected then add it to the list of selected properties 
 	jQuery('.elegant_list_properties tr.propertyrow').on('click',function() {
