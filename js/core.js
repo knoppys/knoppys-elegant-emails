@@ -24,6 +24,7 @@ jQuery(document).ready(function(){
 	    var filtersAgentname = [];
 	    var filtersBedrooms = [];
 	    var filtersSaleorrent = [];
+	    var filtersfeatures = [];
 	    jQuery('.elegant_filters ul.location li.selected').each(function () {
 	        var val = jQuery(this).attr('data-id');
 	        filtersLocation.push('.' + val);
@@ -44,19 +45,18 @@ jQuery(document).ready(function(){
 	        var val = jQuery(this).attr('data-id');
 	        filtersSaleorrent.push('.' + val);
 	    });
+	    jQuery('.elegant_filters ul.features li.selected').each(function () {
+	        var val = jQuery(this).attr('data-id');
+	        filtersSaleorrent.push('.' + val);
+	    });
 	    jQuery('.elegant_list_properties tr.propertyrow')
             .hide()
             .filter(filtersLocation.length > 0 ? filtersLocation.join(', ') : '*')
             .filter(filtersPropertytype.length > 0 ? filtersPropertytype.join(', ') : '*')
             .filter(filtersAgentname.length > 0 ? filtersAgentname.join(', ') : '*')
             .filter(filtersBedrooms.length > 0 ? filtersBedrooms.join(', ') : '*')
-            .filter(filtersSaleorrent.length > 0 ? filtersSaleorrent.join(', ') : '*').show();
-
-            console.log(filtersLocation);
-            console.log(filtersPropertytype);
-            console.log(filtersAgentname);
-            console.log(filtersBedrooms);
-            console.log(filtersSaleorrent);
+            .filter(filtersSaleorrent.length > 0 ? filtersSaleorrent.join(', ') : '*')
+            .filter(filtersfeatures.length > 0 ? filtersfeatures.join(', ') : '*').show();
 	})
 
 

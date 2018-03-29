@@ -9,12 +9,13 @@ function elegant_filters(){
 	<table class="elegant_filters">
 		<tr>
 			<td valign="top" colspan="6">
-				<h3>Property Filters</h3>
+				<h4>Property Filters</h4>
 				<p>Select items to filter the list of properties.</p>			
 			</td>
 		</tr>
 		<tr>
 			<td valign="top">
+				<h4>Locations</h4>
 				<?php $termsArgs = array( 'taxonomy' => 'locations' ); 
 				$terms = get_terms($termsArgs);
 				?>
@@ -25,6 +26,7 @@ function elegant_filters(){
 				</ul>
 			</td>			
 			<td valign="top">
+				<h4>Property Type</h4>
 				<ul class="propertytype others" multiple>
 					<?php $meta_values = get_meta_values( 'type_name', 'properties' );	?>				
 					<?php foreach ($meta_values as $meta_value) { ?>
@@ -33,6 +35,7 @@ function elegant_filters(){
 				</ul>
 			</td>									
 			<td valign="top">
+				<h4>Agent Name</h4>
 				<ul class="agentname others" multiple>
 					<?php $meta_values = get_meta_values( 'agent_name', 'properties' );	?>				
 					<?php foreach ($meta_values as $meta_value) { ?>
@@ -41,6 +44,7 @@ function elegant_filters(){
 				</ul>
 			</td>			
 			<td valign="top">	
+				<h4>Number Of Beds</h4>
 				<ul class="bedrooms others" multiple>
 					<?php $meta_values = get_meta_values( 'number_of_beds', 'properties' ); ?>				
 					<?php foreach ($meta_values as $meta_value) { ?>
@@ -48,41 +52,37 @@ function elegant_filters(){
 					<?php } ?>
 				</ul>		
 			</td>	
-			<td valign="top">				
+			<td valign="top">	
+				<h4>Tenure</h4>			
 				<ul class="saleorrent others" multiple>
 					<?php $meta_values = get_meta_values( 'sale_or_rent', 'properties' ); ?>				
 					<?php foreach ($meta_values as $meta_value) { ?>
 						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value)); ?>"><?php echo $meta_value; ?></li>
 					<?php } ?>
 				</ul>	
-			</td>
-		</tr>
-		<tr>
-			<td valign="top" colspan="6">
-				<h3>Property Features</h3>
-				<p>Click the buttons to toggle property visibility.</p>
-			</td>
-		</tr>
-		<tr>
-			<td valign="top" colspan="6" class="features_toggle">
-				<span class="button" id="panoramic_sea_view">Panoramic Sea View</span>
-				<span class="button" id="sea_view">Sea View</span>
-				<span class="button" id="walk_to_beach">Walk To Beach</span>
-				<span class="button" id="walk_to_shop">Walk To Shop</span>
-				<span class="button" id="aircon_full">Aircon Full</span>
-				<span class="button" id="heated_pool">Heated Pool</span>
-				<span class="button" id="Guardian">Guardian</span>
-				<span class="button" id="spa">Spa</span>
-				<span class="button" id="gym">Gym</span>
-				<span class="button" id="beach_access">Beach Access</span>
-				<span class="button" id="heli_pad">Heli Pad</span>
-				<span class="button" id="golf">Golf</span>
-				<span class="button" id="water_front">Water Front</span>
-				<span class="button" id="skytv">Sky TV</span>
-				<span class="button" id="wifi">WiFi</span>
-				<span class="button" id="Parking">Parking</span>
-				<span class="button" id="small_sea_view">Small Sea View</span>
-				<span class="button" id="indoor_pool">Indoor Pool</span>
+			</td>		
+			<td valign="top" class="features_toggle">
+				<h4>Property Features</h4>
+				<ul class="features others">
+					<li data-id="panoramic_sea_view">Panoramic Sea View</li>
+					<li data-id="sea_view">Sea View</li>
+					<li data-id="walk_to_beach">Walk To Beach</li>
+					<li data-id="walk_to_shop">Walk To Shop</li>
+					<li data-id="aircon_full">Aircon Full</li>
+					<li data-id="heated_pool">Heated Pool</li>
+					<li data-id="Guardian">Guardian</li>
+					<li data-id="spa">Spa</li>
+					<li data-id="gym">Gym</li>
+					<li data-id="beach_access">Beach Access</li>
+					<li data-id="heli_pad">Heli Pad</li>
+					<li data-id="golf">Golf</li>
+					<li data-id="water_front">Water Front</li>
+					<li data-id="skytv">Sky TV</li>
+					<li data-id="wifi">WiFi</li>
+					<li data-id="Parking">Parking</li>
+					<li data-id="small_sea_view">Small Sea View</li>
+					<li data-id="indoor_pool">Indoor Pool</li>
+				</ul>
 			</td>
 		</tr>
 	</table>
