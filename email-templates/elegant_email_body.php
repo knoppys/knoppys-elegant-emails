@@ -48,7 +48,7 @@ function elegant_email_body($messagtext,$properties){
                         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                           <tbody>
                             <tr>
-                              <td style="width:384px;"><img alt="" height="auto" src="<?php /*Knoppys Elegant Variations Plugin*/ echo variations_email_logo(); ?>" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" title="" width="384"></td>
+                              <td style="width:384px;"><img alt="" height="auto" src="<?php /*Knoppys Elegant Variations Plugin*/ echo variations_email_logo(get_host()); ?>" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" title="" width="384"></td>
                             </tr>
                           </tbody>
                         </table>
@@ -76,7 +76,7 @@ function elegant_email_body($messagtext,$properties){
                         <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
                           <?php 
                           //The code for this function is located in the plugin Knoppys Elegant Variations
-                          echo variations_contact_details(); 
+                          echo variations_contact_details(get_host()); 
                           ?>
                         </td>
                       </tr>
