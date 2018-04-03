@@ -33,7 +33,7 @@ function elegant_list_properties(){
 
 	$properties = get_posts($args);
 
-	echo saved_property_table();
+	//echo saved_property_table();
 	
 	ob_start(); 
 
@@ -86,75 +86,36 @@ function elegant_list_properties(){
 							Heli Pad
 						</th>					
 					</tr>
-				</thead>
-				<tfoot>
-					<tr>
-						<th>
-							Image
-						</th>
-						<th class="name">
-							Name
-						</th>
-						<th>
-							Location
-						</th>
-						<th>
-							Type
-						</th>
-						<th>
-							Sale or Rent
-						</th>
-						<th>
-							Agent Name
-						</th>
-						<th>
-							Number of Beds
-						</th>
-						<th>
-							Spa
-						</th>					
-						<th>
-							Heated Pool
-						</th>
-						<th>
-							Beach Access
-						</th>
-						<th>
-							Air Con Full
-						</th>
-						<th>
-							Heli Pad
-						</th>	
-					</tr>
-				</tfoot>
-				
-				<?php			
-				
-				//This returns all the properties for a new email and the remaining properties form an existing one.
-				foreach ($properties as $property) { 
-					$meta = get_post_meta($property->ID);?>				
-					<tr id="<?php echo $property->ID; ?>" class="propertyrow <?php echo strtolower(meta_class($property->ID)); ?> <?php echo property_locations_classes($property->ID); ?>">
-						<td class=""><img src="<?php echo get_the_post_thumbnail_url($property->ID, array(75,75));?>"></td>
-						<td class="">
-						<a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?></a>
-							<div class="message-container">
-								<textarea class="message" placeholder="Your Messgae"></textarea>
-								<input type="text" name="price" class="price" placeholder="Price">
-							</div>
-						</td>
-						<td class=""><?php echo property_locations($property->ID); ?></td>
-						<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
-						<td class=""><?php if(isset($meta['sale_or_rent'][0])){echo $meta['sale_or_rent'][0];} ?></td>
-						<td class=""><?php if(isset($meta['agent_name'][0])){echo $meta['agent_name'][0];} ?></td>
-						<td class=""><?php if(isset($meta['number_of_beds'][0])){echo $meta['number_of_beds'][0];} ?></td>
-						<td class=""><?php if(isset($meta['spa'][0])){echo meta_check($meta['spa'][0]);} ?></td>
-						<td class=""><?php if(isset($meta['heated_pool'][0])){echo meta_check($meta['heated_pool'][0]);} ?></td>
-						<td class=""><?php if(isset($meta['beach_access'][0])){echo meta_check($meta['beach_access'][0]);} ?></td>	
-						<td class=""><?php if(isset($meta['aircon_full'][0])){echo meta_check($meta['aircon_full'][0]);} ?></td>
-						<td class=""><?php if(isset($meta['heli_pad'][0])){echo meta_check($meta['heli_pad'][0]);} ?></td>					
-
-					</tr>
-				<?php } ?>
+				</thead>				
+				<tbody>
+					<?php			
+					//This gets and displays all the existing properties if its an existing email. str_replace(array(" ", "'"), '', $meta_value)
+					existing_properties($_SERVER["QUERY_STRING"]);
+					//This returns all the properties for a new email and the remaining properties form an existing one.
+					foreach ($properties as $property) { 
+						$meta = get_post_meta($property->ID);?>				
+						<tr id="<?php echo $property->ID; ?>" class="propertyrow <?php echo strtolower(meta_class($property->ID)); ?> <?php echo property_locations_classes($property->ID); ?>">
+							<td class=""><img src="<?php echo get_the_post_thumbnail_url($property->ID, array(75,75));?>"></td>
+							<td class="">
+							<a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?></a>
+								<div class="message-container">
+									<textarea class="message" placeholder="Your Messgae"></textarea>
+									<input type="text" name="price" class="price" placeholder="Price">
+								</div>
+							</td>
+							<td class=""><?php echo property_locations($property->ID); ?></td>
+							<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
+							<td class=""><?php if(isset($meta['sale_or_rent'][0])){echo $meta['sale_or_rent'][0];} ?></td>
+							<td class=""><?php if(isset($meta['agent_name'][0])){echo $meta['agent_name'][0];} ?></td>
+							<td class=""><?php if(isset($meta['number_of_beds'][0])){echo $meta['number_of_beds'][0];} ?></td>
+							<td class=""><?php if(isset($meta['spa'][0])){echo meta_check($meta['spa'][0]);} ?></td>
+							<td class=""><?php if(isset($meta['heated_pool'][0])){echo meta_check($meta['heated_pool'][0]);} ?></td>
+							<td class=""><?php if(isset($meta['beach_access'][0])){echo meta_check($meta['beach_access'][0]);} ?></td>	
+							<td class=""><?php if(isset($meta['aircon_full'][0])){echo meta_check($meta['aircon_full'][0]);} ?></td>
+							<td class=""><?php if(isset($meta['heli_pad'][0])){echo meta_check($meta['heli_pad'][0]);} ?></td>						
+						</tr>
+					<?php } ?>
+				</tbody>
 			</tr>
 		</table>
 	</div>
@@ -277,7 +238,7 @@ function existing_properties($id){
 						<div class="message-container">
 							<?php $notes = nl2br(rawurldecode(get_post_meta($query_array['id'], 'propnotes_'.$property->ID, true))); ?>
 							<?php $price = get_post_meta($query_array['id'], 'propprice_'.$property->ID, true); ?>
-							<textarea class="message"><?php echo $notes; ?></textarea>
+							<textarea class="message"><?php echo str_replace('<br />', '', $notes); ?></textarea>
 							<input type="text" name="price" class="price" placeholder="<?php echo $price; ?>" value="">
 						</div>
 					</td>
