@@ -57,8 +57,9 @@ function elegeantSend($to,$messagetext,$properties){
 
     $headers[] = 'Content-Type: text/html; charset=UTF-8';
     $headers[] = variations_from_address(get_host());
+    $subject = variations_email_subject(get_host());
 
-    $mailClient = wp_mail($to, variations_email_subject(get_host()), $message, $headers );
+    $mailClient = wp_mail($to, $subject, $message, $headers );
 
     if ($mailClient) {
         echo 'Your email has been sent';
