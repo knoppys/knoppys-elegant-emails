@@ -50,14 +50,14 @@ function elegantSendEmail() {
 Send the email out and generate a response
 *******************************************/
 function elegeantSend($to,$messagetext,$properties){
-
-	//$message = elegant_email_header();
+	
     $message = elegant_email_body($messagetext,$properties);
-    //$message .= elegant_email_footer();
+    $fromAddress = variations_from_address(get_host());
+    $subject = variations_email_subject(get_host());
 
     $headers[] = 'Content-Type: text/html; charset=UTF-8';
-    $headers[] = variations_from_address(get_host());
-    $subject = variations_email_subject(get_host());
+    $headers[] = $fromAddress;
+    
 
     $mailClient = wp_mail($to, $subject, $message, $headers );
 
