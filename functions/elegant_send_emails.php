@@ -56,9 +56,9 @@ function elegeantSend($to,$messagetext,$properties){
     //$message .= elegant_email_footer();
 
     $headers[] = 'Content-Type: text/html; charset=UTF-8';
-    $headers[] = 'From: Elegant Address <enquiries@elegant-address.com>';
+    $headers[] = variations_from_address(get_host());
 
-    $mailClient = wp_mail($to, 'Property Presentation', $message, $headers );
+    $mailClient = wp_mail($to, variations_email_subject(get_host()), $message, $headers );
 
     if ($mailClient) {
         echo 'Your email has been sent';
