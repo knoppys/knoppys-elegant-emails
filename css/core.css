@@ -16,3 +16,14 @@ table.elegant_list_properties tr {
     display: block;
     margin-bottom: 30px;
 }
+.titlerow {
+    text-align: left !important;
+}
+tr.propertyrow .dashicons-welcome-write-blog {
+    background: #0073aa;
+    color: #fff;
+    margin-right: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-decoration: none;
+}
