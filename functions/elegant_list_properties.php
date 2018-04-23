@@ -263,7 +263,8 @@ function existing_properties($id){
 		$args = array(
 			'post_type' => 'properties',
 			'posts_per_page' => -1,
-			'include' => $properties
+			'orderby' => 'post__in',
+			'post__in' => $properties
 		);
 		$posts = get_posts($args);
 		if ($posts) {
@@ -277,7 +278,7 @@ function existing_properties($id){
 							<?php $notes = nl2br(rawurldecode(get_post_meta($query_array['id'], 'propnotes_'.$property->ID, true))); ?>
 							<?php $price = get_post_meta($query_array['id'], 'propprice_'.$property->ID, true); ?>
 							<textarea class="message"><?php echo str_replace('<br />', '', $notes); ?></textarea>
-							<input type="text" name="price" class="price" placeholder="<?php echo $price; ?>" value="">
+							<input type="text" name="price" class="price" placeholder="" value="<?php echo $price; ?>">
 						</div>
 					</td>
 					<td class=""><?php echo property_locations($property->ID); ?></td>
@@ -290,7 +291,6 @@ function existing_properties($id){
 					<td class=""><?php if(isset($meta['beach_access'][0])){echo meta_check($meta['beach_access'][0]);} ?></td>	
 					<td class=""><?php if(isset($meta['aircon_full'][0])){echo meta_check($meta['aircon_full'][0]);} ?></td>
 					<td class=""><?php if(isset($meta['heli_pad'][0])){echo meta_check($meta['heli_pad'][0]);} ?></td>
-
 				</tr>
 			<?php }		
 		} 

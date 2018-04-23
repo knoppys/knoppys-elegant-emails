@@ -98,6 +98,7 @@ function  elegantSave($title,$to,$messagetext,$properties){
     $update = update_post_meta($newProperyEmail, 'property_data', $propertyString);
 
     //Add the property list meta
+    $i = 0;
     foreach ($properties as $property) {
 
         //Add the property notes
@@ -106,5 +107,8 @@ function  elegantSave($title,$to,$messagetext,$properties){
         //Add the property price
         update_post_meta($newProperyEmail, 'propprice_'.$property[0], $property[2]);
 
+        //Add the item index to order the posts in the same order when reloaded in the saved table
+        update_post_meta($newProperyEmail, 'savedorder_'.$property[0], $i);     
+        $i++; 
     } 
 }

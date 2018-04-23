@@ -58,15 +58,13 @@ function elegant_list_properties_existing(){
 						<form class="resend" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" enctype="multipart/form-data">
 							<?php /*main fields*/ ?>
 							<input type="email" name="email">					
-
 							<?php /* hidden fields for processing */ ?>
 							<input type="hidden" name="action" value="resendemail">
 							<input type="hidden" name="emailID" value="<?php echo $email->ID; ?>">
-
 							<input class="button" type="submit" value="Send and Save">
 						</form>
 					</td>
-				</tr>
+				</tr>								
 			<?php } ?>
 		</tr>
 	</table>
