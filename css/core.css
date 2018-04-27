@@ -27,3 +27,6 @@ tr.propertyrow .dashicons-welcome-write-blog {
     border-radius: 3px;
     text-decoration: none;
 }
+.ac-properties table.fixed {
+    table-layout: auto !important;
+}
