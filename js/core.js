@@ -119,6 +119,11 @@ jQuery(document).ready(function(){
 		e.stopPropagation();  
 	});
 
+	//Stop the property row from toggling when clicking on the inputs. 
+	jQuery('a.edit-property').on('click', function(e){
+		e.stopPropagation();  
+	});
+
 
 	//Ajax to send the ids and form data over to the email program
 	jQuery('#emailSubmit').on('click', function(){

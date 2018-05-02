@@ -136,7 +136,7 @@ function elegant_list_properties(){
 					<tr id="<?php echo $property->ID; ?>" class="propertyrow <?php echo strtolower(meta_class($property->ID)); ?> <?php echo property_locations_classes($property->ID); ?>">
 						<td class=""><img src="<?php echo get_the_post_thumbnail_url($property->ID, array(75,75));?>"></td>
 						<td class="titlerow">
-							<a target="_blank" href="<?php echo admin_url(); ?>/post.php?post=<?php echo $property->ID; ?>&action=edit" title="Edit"><span class="dashicons dashicons-welcome-write-blog"></span></a><a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?></a>
+							<a class="edit-property" target="_blank" href="<?php echo admin_url(); ?>/post.php?post=<?php echo $property->ID; ?>&action=edit" title="Edit"><span class="dashicons dashicons-welcome-write-blog"></span></a><a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?></a>
 							<div class="message-container">
 								<textarea class="message" placeholder="Your Messgae"></textarea>
 								<input type="text" name="price" class="price" placeholder="Price">
@@ -151,8 +151,7 @@ function elegant_list_properties(){
 						<td class=""><?php if(isset($meta['heated_pool'][0])){echo meta_check($meta['heated_pool'][0]);} ?></td>
 						<td class=""><?php if(isset($meta['beach_access'][0])){echo meta_check($meta['beach_access'][0]);} ?></td>	
 						<td class=""><?php if(isset($meta['aircon_full'][0])){echo meta_check($meta['aircon_full'][0]);} ?></td>
-						<td class=""><?php if(isset($meta['heli_pad'][0])){echo meta_check($meta['heli_pad'][0]);} ?></td>					
-
+						<td class=""><?php if(isset($meta['heli_pad'][0])){echo meta_check($meta['heli_pad'][0]);} ?></td>	
 					</tr>
 				<?php } ?>
 			</tr>
@@ -163,10 +162,11 @@ function elegant_list_properties(){
 	  var input, filter, table, tr, td, i;
 	  input = document.getElementById("myInput");
 	  filter = input.value.toUpperCase();
+	  console.log(filter);
 	  table = document.getElementById("elegant_list_properties");
 	  tr = table.getElementsByTagName("tr");
 	  for (i = 0; i < tr.length; i++) {
-	    td = tr[i].getElementsByTagName("td")[0];
+	    td = tr[i].getElementsByTagName("td")[1];
 	    if (td) {
 	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
 	        tr[i].style.display = "";
