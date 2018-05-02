@@ -55,6 +55,9 @@ function elegant_list_properties(){
 						<th class="name titlerow">
 							Name
 						</th>
+						<th class="hide">
+							Ref
+						</th>
 						<th>
 							Location
 						</th>
@@ -142,6 +145,9 @@ function elegant_list_properties(){
 								<input type="text" name="price" class="price" placeholder="Price">
 							</div>
 						</td>
+						<td class="hide">
+							<?php echo $meta['reference_code'][0]; ?>
+						</td>
 						<td class=""><?php echo property_locations($property->ID); ?></td>
 						<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
 						<td class=""><?php if(isset($meta['sale_or_rent'][0])){echo $meta['sale_or_rent'][0];} ?></td>
@@ -166,7 +172,7 @@ function elegant_list_properties(){
 	  table = document.getElementById("elegant_list_properties");
 	  tr = table.getElementsByTagName("tr");
 	  for (i = 0; i < tr.length; i++) {
-	    td = tr[i].getElementsByTagName("td")[1];
+	    td = tr[i].getElementsByTagName("td")[2];
 	    if (td) {
 	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
 	        tr[i].style.display = "";
@@ -280,6 +286,9 @@ function existing_properties($id){
 							<textarea class="message"><?php echo str_replace('<br />', '', $notes); ?></textarea>
 							<input type="text" name="price" class="price" placeholder="" value="<?php echo $price; ?>">
 						</div>
+					</td>
+					<td class="hide">
+						<?php echo $meta['reference_code'][0]; ?>
 					</td>
 					<td class=""><?php echo property_locations($property->ID); ?></td>
 					<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
