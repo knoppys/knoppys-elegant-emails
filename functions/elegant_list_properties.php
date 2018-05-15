@@ -137,7 +137,7 @@ function elegant_list_properties(){
 				foreach ($properties as $property) { 
 					$meta = get_post_meta($property->ID);?>				
 					<tr id="<?php echo $property->ID; ?>" class="propertyrow <?php echo strtolower(meta_class($property->ID)); ?> <?php echo property_locations_classes($property->ID); ?>">
-						<td class=""><img src="<?php echo get_the_post_thumbnail_url($property->ID, array(75,75));?>"></td>
+						<td class=""><img src="<?php echo variations_thumbnail($property->ID,'thumbnail'); ?>" width="75"></td>
 						<td class="titlerow">
 							<a class="edit-property" target="_blank" href="<?php echo admin_url(); ?>/post.php?post=<?php echo $property->ID; ?>&action=edit" title="Edit"><span class="dashicons dashicons-welcome-write-blog"></span></a><a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?></a>
 							<div class="message-container">
