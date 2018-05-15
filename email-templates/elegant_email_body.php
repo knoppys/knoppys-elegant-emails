@@ -213,7 +213,7 @@ function elegant_email_body($messagtext,$properties){
                     <tr>
                       <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
                         <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
-                          <p><?php echo nl2br(rawurldecode($property[1])); ?></p>
+                          <p><?php echo nl2br(rawurldecode(stripslashes($property[1]))); ?></p>
                         </div>
                       </td>
                     </tr>

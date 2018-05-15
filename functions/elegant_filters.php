@@ -37,10 +37,10 @@ function elegant_filters(){
 			<td valign="top">
 				<h4>Agent Name</h4>
 				<ul class="agentname others" multiple>
-					<?php $meta_values = get_meta_values( 'agent_name', 'properties' );	?>				
-					<?php foreach ($meta_values as $meta_value) { ?>
-						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value)); ?>"><?php echo $meta_value; ?></li>
-					<?php } ?>
+					<?php 
+					//Function located in Knoppys Elegant Variations Plugin
+					variations_agents(get_host()); 
+					?>
 				</ul>
 			</td>			
 			<td valign="top">	
@@ -55,10 +55,10 @@ function elegant_filters(){
 			<td valign="top">	
 				<h4>Tenure</h4>			
 				<ul class="saleorrent others" multiple>
-					<?php $meta_values = get_meta_values( 'sale_or_rent', 'properties' ); ?>				
-					<?php foreach ($meta_values as $meta_value) { ?>
-						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value)); ?>"><?php echo $meta_value; ?></li>
-					<?php } ?>
+					<?php 
+					//Function located in Knoppys Elegant Variations Plugin
+					variations_tenure(get_host()); 
+					?>
 				</ul>	
 			</td>		
 			<td valign="top" class="features_toggle">
@@ -66,7 +66,7 @@ function elegant_filters(){
 				<ul class="features others">
 					<?php 
 					//Function located in Knoppys Elegant Variations Plugin
-					variations_featrues(get_host()); 
+					variations_features(get_host()); 
 					?>
 				</ul>
 			</td>
