@@ -95,8 +95,11 @@ function elegant_list_properties(){
 						<th>
 							Image
 						</th>
-						<th class="name">
+						<th class="name titlerow">
 							Name
+						</th>
+						<th class="hide">
+							Ref
 						</th>
 						<th>
 							Location
@@ -127,7 +130,7 @@ function elegant_list_properties(){
 						</th>
 						<th>
 							Heli Pad
-						</th>	
+						</th>		
 					</tr>
 				</tfoot>
 				
