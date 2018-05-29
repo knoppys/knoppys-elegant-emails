@@ -138,9 +138,12 @@ function elegant_email_body($messagtext,$properties){
                       <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
                         <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
                           <p><a href="<?php echo get_the_permalink($property[0]); ?>" target="_blank" style="color:#bc8536;"><span style="color:#bc8536; font-size: 18px; line-height: 27px; font-weight: bold;margin-top:10px;"><?php echo get_the_title($property[0]); ?></span></a></p>
-                        </div>
+                        </div>        
+                        <div style="cursor:auto;color:#bc8536;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
+                          <p><span style="color:#bc8536; font-size: 16px; line-height: 27px; font-weight: bold;margin-top:10px;">Location: <?php echo location($property[0]); ?></span></p>
+                        </div>   
                       </td>
-                    </tr>
+                    </tr>                    
                     <tr>
                       <td align="center" style="word-wrap:break-word;font-size:0px;padding:0px 0px 0px 0px;">
                         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
@@ -185,9 +188,9 @@ function elegant_email_body($messagtext,$properties){
                     <tr>
                       <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
                         <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
-                          	<p>Property Type: <?php echo get_post_meta($property[0],'type_name', true); ?><br>
-                            Location: <?php location($property[0]); ?><br>
-                            Reference: <?php echo get_post_meta($property[0],'reference_code', true); ?><br> 
+                            <p>Reference: <?php echo get_post_meta($property[0],'reference_code', true); ?><br>
+                          	Property Type: <?php echo get_post_meta($property[0],'type_name', true); ?><br>
+                            Location: <?php echo location($property[0]); ?><br>                             
                             <span style="font-weight:bold;">Price: <?php echo $property[2]; ?></span></p>
                             <p><a style="color:#bc8536;" target="_blank" href="<?php echo get_site_url(); ?>/download-brochure/?brochure_id=<?php echo $property[0]; ?>"><span style="color:#bc8536;padding:5px;color:font-size: 16px; line-height: 1.5; font-weight: bold;">Download Our Brochure</span></a></p>            
                         </div>
