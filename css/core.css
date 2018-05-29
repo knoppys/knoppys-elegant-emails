@@ -19,6 +19,10 @@ table.elegant_list_properties tr {
 .titlerow {
     text-align: left !important;
 }
+.propertyrow img {
+    width: 100px;
+    padding: 10px;
+}
 tr.propertyrow .dashicons-welcome-write-blog {
     background: #0073aa;
     color: #fff;
