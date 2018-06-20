@@ -271,6 +271,7 @@ function existing_properties($id){
 		$properties = explode(',', get_post_meta($query_array['id'], 'property_data',true));
 		$args = array(
 			'post_type' => 'properties',
+			'post_status' => array('publish', 'draft', 'private')
 			'posts_per_page' => -1,
 			'orderby' => 'post__in',
 			'post__in' => $properties
