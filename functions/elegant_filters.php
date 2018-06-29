@@ -39,7 +39,7 @@ function elegant_filters(){
 				<ul class="agentname others" multiple>
 					<?php 
 					//Function located in Knoppys Elegant Variations Plugin
-					variations_agents(get_host()); 
+					variations_agents_filters(get_host()); 
 					?>
 				</ul>
 			</td>			
@@ -57,7 +57,7 @@ function elegant_filters(){
 				<ul class="saleorrent others" multiple>
 					<?php 
 					//Function located in Knoppys Elegant Variations Plugin
-					variations_tenure(get_host()); 
+					variations_tenure_filters(get_host()); 
 					?>
 				</ul>	
 			</td>		
@@ -66,7 +66,7 @@ function elegant_filters(){
 				<ul class="features others">
 					<?php 
 					//Function located in Knoppys Elegant Variations Plugin
-					variations_features(get_host()); 
+					variations_features_filters(get_host()); 
 					?>
 				</ul>
 			</td>

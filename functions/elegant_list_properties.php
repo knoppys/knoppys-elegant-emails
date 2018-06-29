@@ -48,90 +48,10 @@ function elegant_list_properties(){
 		</div>
 		<table id="elegant_list_properties" class="elegant_list_properties" cellspacing="0">	
 				<thead>				
-					<tr class="headerrow">
-						<th>
-							Image
-						</th>
-						<th class="name titlerow">
-							Name
-						</th>
-						<th class="hide">
-							Ref
-						</th>
-						<th>
-							Location
-						</th>
-						<th>
-							Type
-						</th>
-						<th>
-							Sale or Rent
-						</th>
-						<th>
-							Agent Name
-						</th>
-						<th>
-							Number of Beds
-						</th>
-						<th>
-							Spa
-						</th>					
-						<th>
-							Heated Pool
-						</th>
-						<th>
-							Beach Access
-						</th>
-						<th>
-							Air Con Full
-						</th>
-						<th>
-							Heli Pad
-						</th>					
-					</tr>
+					<tr class="headerrow"><?php echo variations_table_header(get_host()); ?></tr>
 				</thead>
 				<tfoot>
-					<tr>
-						<th>
-							Image
-						</th>
-						<th class="name titlerow">
-							Name
-						</th>
-						<th class="hide">
-							Ref
-						</th>
-						<th>
-							Location
-						</th>
-						<th>
-							Type
-						</th>
-						<th>
-							Sale or Rent
-						</th>
-						<th>
-							Agent Name
-						</th>
-						<th>
-							Number of Beds
-						</th>
-						<th>
-							Spa
-						</th>					
-						<th>
-							Heated Pool
-						</th>
-						<th>
-							Beach Access
-						</th>
-						<th>
-							Air Con Full
-						</th>
-						<th>
-							Heli Pad
-						</th>		
-					</tr>
+					<tr><?php echo variations_table_header(get_host()); ?></tr>
 				</tfoot>
 				
 				<?php			
@@ -153,14 +73,10 @@ function elegant_list_properties(){
 						</td>
 						<td class=""><?php echo property_locations($property->ID); ?></td>
 						<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
-						<td class=""><?php if(isset($meta['sale_or_rent'][0])){echo $meta['sale_or_rent'][0];} ?></td>
-						<td class=""><?php if(isset($meta['agent_name'][0])){echo $meta['agent_name'][0];} ?></td>
+						<td class=""><?php variations_tenure_table(get_host(),$property->ID); ?></td>
+						<td class=""><?php variations_agents_table(get_host(),$property->ID); ?></td>
 						<td class=""><?php if(isset($meta['number_of_beds'][0])){echo $meta['number_of_beds'][0];} ?></td>
-						<td class=""><?php if(isset($meta['spa'][0])){echo meta_check($meta['spa'][0]);} ?></td>
-						<td class=""><?php if(isset($meta['heated_pool'][0])){echo meta_check($meta['heated_pool'][0]);} ?></td>
-						<td class=""><?php if(isset($meta['beach_access'][0])){echo meta_check($meta['beach_access'][0]);} ?></td>	
-						<td class=""><?php if(isset($meta['aircon_full'][0])){echo meta_check($meta['aircon_full'][0]);} ?></td>
-						<td class=""><?php if(isset($meta['heli_pad'][0])){echo meta_check($meta['heli_pad'][0]);} ?></td>	
+						<?php echo variations_table_features(get_host(), $meta); ?>	
 					</tr>
 				<?php } ?>
 			</tr>
@@ -296,14 +212,10 @@ function existing_properties($id){
 					</td>
 					<td class=""><?php echo property_locations($property->ID); ?></td>
 					<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
-					<td class=""><?php if(isset($meta['sale_or_rent'][0])){echo $meta['sale_or_rent'][0];} ?></td>
-					<td class=""><?php if(isset($meta['agent_name'][0])){echo $meta['agent_name'][0];} ?></td>
+					<td class=""><?php variations_tenure_table(get_host(),$property->ID); ?></td>
+					<td class=""><?php variations_agents_table(get_host(),$property->ID); ?></td>
 					<td class=""><?php if(isset($meta['number_of_beds'][0])){echo $meta['number_of_beds'][0];} ?></td>
-					<td class=""><?php if(isset($meta['spa'][0])){echo meta_check($meta['spa'][0]);} ?></td>
-					<td class=""><?php if(isset($meta['heated_pool'][0])){echo meta_check($meta['heated_pool'][0]);} ?></td>
-					<td class=""><?php if(isset($meta['beach_access'][0])){echo meta_check($meta['beach_access'][0]);} ?></td>	
-					<td class=""><?php if(isset($meta['aircon_full'][0])){echo meta_check($meta['aircon_full'][0]);} ?></td>
-					<td class=""><?php if(isset($meta['heli_pad'][0])){echo meta_check($meta['heli_pad'][0]);} ?></td>
+					<?php echo variations_table_features(get_host(), $meta); ?>	
 				</tr>
 			<?php }		
 		} 
@@ -321,44 +233,7 @@ function saved_property_table() {
 	<p>Properties marked in green will be sent in your email. You can reorder these properties using a drag and drop facility.</p>
 	<table class="saved" cellspacing="0" cellpadding="0" class="" width="600" border-collapse="collapse">	
 		<tbody>
-			<tr class="headerrow">
-					<th>
-						Image
-					</th>
-					<th class="name">
-						Name
-					</th>
-					<th>
-						Location
-					</th>
-					<th>
-						Type
-					</th>
-					<th>
-						Sale or Rent
-					</th>
-					<th>
-						Agent Name
-					</th>
-					<th>
-						Number of Beds
-					</th>
-					<th>
-						Spa
-					</th>					
-					<th>
-						Heated Pool
-					</th>
-					<th>
-						Beach Access
-					</th>
-					<th>
-						Air Con Full
-					</th>
-					<th>
-						Heli Pad
-					</th>					
-				</tr>
+			<tr class="headerrow"><?php echo variations_table_header(get_host()); ?></tr>
 				<?php //This gets and displays all the existing properties if its an existing email. str_replace(array(" ", "'"), '', $meta_value)
 				existing_properties($_SERVER["QUERY_STRING"]); ?>
 		</tbody>
