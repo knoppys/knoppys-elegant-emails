@@ -191,8 +191,8 @@ function elegant_email_body($messagtext,$properties){
                             <p>Reference: <?php echo get_post_meta($property[0],'reference_code', true); ?><br>
                           	Property Type: <?php echo get_post_meta($property[0],'type_name', true); ?><br>
                             Location: <?php echo location($property[0]); ?><br>                             
-                            <span style="font-weight:bold;">Price: <?php echo $property[2]; ?></span></p>
-                            <p><a style="color:#bc8536;" target="_blank" href="<?php echo get_site_url(); ?>/download-brochure/?brochure_id=<?php echo $property[0]; ?>"><span style="color:#bc8536;padding:5px;color:font-size: 16px; line-height: 1.5; font-weight: bold;">Download Our Brochure</span></a></p>            
+                            <span style="font-weight:bold;">Price: <?php echo $property[2]; ?></span></p>                            
+                            <?php echo variations_brochurelink(get_host(),$property[0]); ?>
                         </div>
                       </td>
                     </tr>
