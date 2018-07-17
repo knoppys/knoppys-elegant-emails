@@ -192,7 +192,7 @@ function elegant_email_body($messagtext,$properties){
                           	Property Type: <?php echo get_post_meta($property[0],'type_name', true); ?><br>
                             Location: <?php echo location($property[0]); ?><br>                             
                             <span style="font-weight:bold;">Price: <?php echo $property[2]; ?></span></p>                            
-                            <?php echo variations_brochurelink(get_host(),$property[0]); ?>
+                            <?php echo variations_brochurelink(get_host(),$property[0]); ?> 
                         </div>
                       </td>
                     </tr>
