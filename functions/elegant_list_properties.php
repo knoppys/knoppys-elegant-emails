@@ -73,7 +73,10 @@ function elegant_list_properties(){
 							</div>
 						</td>
 						<td class="hide">
-							<?php echo $meta['reference_code'][0]; ?>
+							<?php 
+							if ($meta['reference_code'][0]) {
+								echo $meta['reference_code'][0];
+							} ?>
 						</td>
 						<td class=""><?php echo property_locations($property->ID); ?></td>
 						<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
@@ -212,7 +215,10 @@ function existing_properties($id){
 						</div>
 					</td>
 					<td class="hide">
-						<?php echo $meta['reference_code'][0]; ?>
+						<?php 
+							if ($meta['reference_code'][0]) {
+								echo $meta['reference_code'][0];
+							} ?>
 					</td>
 					<td class=""><?php echo property_locations($property->ID); ?></td>
 					<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
