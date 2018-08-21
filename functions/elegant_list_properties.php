@@ -58,12 +58,15 @@ function elegant_list_properties(){
 				
 				//This returns all the properties for a new email and the remaining properties form an existing one.
 				foreach ($properties as $property) { 
-					$meta = get_post_meta($property->ID);?>				
+					$meta = get_post_meta($property->ID);
+					$status = get_post_status($property->ID);?>				
 					<tr id="<?php echo $property->ID; ?>" class="propertyrow 
 					<?php echo strtolower(meta_class($property->ID)); ?> 
 					<?php echo property_locations_classes($property->ID); ?> 
 					<?php echo variations_agent_classes(get_host(), $property->ID); ?>
-					<?php echo variations_tenure_classes(get_host(), $property->ID); ?>">
+					<?php echo variations_tenure_classes(get_host(), $property->ID); ?>
+					<?php echo $status; ?>">
+
 						<td class=""><img src="<?php echo variations_thumbnail($property->ID,'thumbnail', get_host()); ?>" width="75"></td>
 						<td class="titlerow">
 							<a class="edit-property" target="_blank" href="<?php echo admin_url(); ?>/post.php?post=<?php echo $property->ID; ?>&action=edit" title="Edit"><span class="dashicons dashicons-welcome-write-blog"></span></a><a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?> <?php echo $meta['reference_code'][0]; ?></a>
@@ -71,7 +74,8 @@ function elegant_list_properties(){
 								<textarea class="message" placeholder="Your Messgae"></textarea>
 								<input type="text" name="price" class="price" placeholder="Price">
 							</div>
-						</td>						
+						</td>		
+						<td class=""><?php echo $status?></td>				
 						<td class=""><?php echo property_locations($property->ID); ?></td>
 						<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
 						<td class=""><?php variations_tenure_table(get_host(),$property->ID); ?></td>

@@ -8,12 +8,20 @@ function elegant_filters(){
 	ob_start(); ?>	
 	<table class="elegant_filters">
 		<tr>
-			<td valign="top" colspan="6">
+			<td valign="top" colspan="7">
 				<h4>Property Filters</h4>
 				<p>Select items to filter the list of properties.</p>			
 			</td>
 		</tr>
 		<tr>
+			<td valign="top">
+				<h4>Property Status</h4>
+				<ul class="propertystatus">
+					<li data-id="publish">Public</li>
+					<li data-id="private">Private</li>
+					<li data-id="draft">Draft</li>
+				</ul>
+			</td>
 			<td valign="top">
 				<h4>Locations</h4>
 				<?php $termsArgs = array( 'taxonomy' => 'locations' ); 
