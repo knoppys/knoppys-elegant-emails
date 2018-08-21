@@ -20,6 +20,7 @@ jQuery(document).ready(function(){
     jQuery('.elegant_filters ul li').on('click', function (e) {
 	    jQuery(this).toggleClass('selected');
 
+	    var filtersStatus = [];
 	    var filtersLocation = [];
 	    var filtersPropertytype = [];
 	    var filtersAgentname = [];
@@ -27,6 +28,10 @@ jQuery(document).ready(function(){
 	    var filtersSaleorrent = [];
 	    var filtersfeatures = [];
 
+	    jQuery('.elegant_filters ul.propertystatus li.selected').each(function () {
+	        var val = jQuery(this).attr('data-id');
+	        filtersLocation.push('.' + val);
+	    });
 	    jQuery('.elegant_filters ul.location li.selected').each(function () {
 	        var val = jQuery(this).attr('data-id');
 	        filtersLocation.push('.' + val);
@@ -53,6 +58,7 @@ jQuery(document).ready(function(){
 	    });
 	    jQuery('.elegant_list_properties tr.propertyrow')
             .hide()
+            .filter(filtersStatus.length > 0 ? filtersStatus.join(', ') : '*')
             .filter(filtersLocation.length > 0 ? filtersLocation.join(', ') : '*')
             .filter(filtersPropertytype.length > 0 ? filtersPropertytype.join(', ') : '*')
             .filter(filtersAgentname.length > 0 ? filtersAgentname.join(', ') : '*')
