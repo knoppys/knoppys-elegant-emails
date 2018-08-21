@@ -30,7 +30,7 @@ jQuery(document).ready(function(){
 
 	    jQuery('.elegant_filters ul.propertystatus li.selected').each(function () {
 	        var val = jQuery(this).attr('data-id');
-	        filtersLocation.push('.' + val);
+	        filtersStatus.push('.' + val);
 	    });
 	    jQuery('.elegant_filters ul.location li.selected').each(function () {
 	        var val = jQuery(this).attr('data-id');
@@ -66,6 +66,7 @@ jQuery(document).ready(function(){
             .filter(filtersSaleorrent.length > 0 ? filtersSaleorrent.join(', ') : '*')
             .filter(filtersfeatures.length > 0 ? filtersfeatures.join(', ') : '*').show();
 
+        console.log(filtersStatus);
         console.log(filtersLocation);
         console.log(filtersPropertytype);
         console.log(filtersAgentname);
