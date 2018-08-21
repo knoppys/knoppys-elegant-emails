@@ -66,18 +66,12 @@ function elegant_list_properties(){
 					<?php echo variations_tenure_classes(get_host(), $property->ID); ?>">
 						<td class=""><img src="<?php echo variations_thumbnail($property->ID,'thumbnail', get_host()); ?>" width="75"></td>
 						<td class="titlerow">
-							<a class="edit-property" target="_blank" href="<?php echo admin_url(); ?>/post.php?post=<?php echo $property->ID; ?>&action=edit" title="Edit"><span class="dashicons dashicons-welcome-write-blog"></span></a><a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?></a>
+							<a class="edit-property" target="_blank" href="<?php echo admin_url(); ?>/post.php?post=<?php echo $property->ID; ?>&action=edit" title="Edit"><span class="dashicons dashicons-welcome-write-blog"></span></a><a href="<?php echo $property->guid;?>" target="_blank"><?php echo $property->post_title; ?> <?php echo $meta['reference_code'][0]; ?></a>
 							<div class="message-container">
 								<textarea class="message" placeholder="Your Messgae"></textarea>
 								<input type="text" name="price" class="price" placeholder="Price">
 							</div>
-						</td>
-						<td class="hide">
-							<?php 
-							if ($meta['reference_code'][0]) {
-								echo $meta['reference_code'][0];
-							} ?>
-						</td>
+						</td>						
 						<td class=""><?php echo property_locations($property->ID); ?></td>
 						<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>
 						<td class=""><?php variations_tenure_table(get_host(),$property->ID); ?></td>
@@ -98,7 +92,7 @@ function elegant_list_properties(){
 	  table = document.getElementById("elegant_list_properties");
 	  tr = table.getElementsByTagName("tr");
 	  for (i = 0; i < tr.length; i++) {
-	    td = tr[i].getElementsByTagName("td")[2];
+	    td = tr[i].getElementsByTagName("td")[1];
 	    if (td) {
 	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
 	        tr[i].style.display = "";
@@ -215,10 +209,7 @@ function existing_properties($id){
 						</div>
 					</td>
 					<td class="hide">
-						<?php 
-							if ($meta['reference_code'][0]) {
-								echo $meta['reference_code'][0];
-							} ?>
+						<?php echo $meta['reference_code'][0]; ?>
 					</td>
 					<td class=""><?php echo property_locations($property->ID); ?></td>
 					<td class=""><?php if(isset($meta['type_name'][0])){echo $meta['type_name'][0];} ?></td>

@@ -28,10 +28,7 @@ function elegant_filters(){
 			<td valign="top">
 				<h4>Property Type</h4>
 				<ul class="propertytype others" multiple>
-					<?php $meta_values = get_meta_values( 'type_name', 'properties' );	?>				
-					<?php foreach ($meta_values as $meta_value) { ?>
-						<li data-id="<?php echo strtolower(str_replace(array(" ", "'"), '', $meta_value)); ?>"><?php echo $meta_value; ?></li>
-					<?php } ?>
+					<?php variations_propertytype_filters(get_host()); ?>
 				</ul>
 			</td>									
 			<td valign="top">

@@ -28,29 +28,29 @@ powers the email and send functions
 add_action( 'wp_ajax_elegantSendEmail', 'elegantSendEmail' );
 function elegantSendEmail() {
 
-	//Get the array sent
-	$to = $_POST['datastring']['newEmailForm'][0][0];
-	$title = $_POST['datastring']['newEmailForm'][0][1];
+    //Get the array sent
+    $to = $_POST['datastring']['newEmailForm'][0][0];
+    $title = $_POST['datastring']['newEmailForm'][0][1];
     $messagetext = nl2br(rawurldecode($_POST['datastring']['newEmailForm'][0][2]));        
-	$properties = $_POST['datastring']['properties'];
+    $properties = $_POST['datastring']['properties'];
 
     //Send the email and get a report back
-	$sent = elegeantSend($to,$messagetext,$properties);
+    $sent = elegeantSend($to,$messagetext,$properties);
     
-	//Save the email as a post and get a report back
-	$saved = elegantSave($title,$to,$messagetext,$properties);
+    //Save the email as a post and get a report back
+    $saved = elegantSave($title,$to,$messagetext,$properties);
 
     //echo 'Email Status:'.$sent.'<br>Save Status:'.$saved;
-	
-	//Terminate and provide a response. 
-	wp_die(); 
+    
+    //Terminate and provide a response. 
+    wp_die(); 
 }
 
 /*******************************************
 Send the email out and generate a response
 *******************************************/
 function elegeantSend($to,$messagetext,$properties){
-	
+    
     $message = elegant_email_body($messagetext,$properties);
     $fromAddress = variations_from_address(get_host());
     $subject = variations_email_subject(get_host());

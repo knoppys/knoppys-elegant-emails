@@ -149,7 +149,10 @@ function elegant_email_body($messagtext,$properties){
                         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                           <tbody>
                             <tr>
-                              <td style="width:600px;padding:10px;"><img alt="" width="100%" height="auto" src="<?php echo get_the_post_thumbnail_url($property[0], 'large'); ?>" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;"></td>
+                            <?php
+                            $imageurl = knoppys_property_header($property[0],get_post_meta($property[0],'image_1', true)); ?>
+                            ?>
+                              <td style="width:600px;padding:10px;"><img alt="" width="100%" height="auto" src="<?php echo $imageurl; ?>" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;"></td>
                             </tr>
                           </tbody>
                         </table>
@@ -175,7 +178,7 @@ function elegant_email_body($messagtext,$properties){
                     <tr>
                       <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
                         <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
-                          <p><?php echo get_post_meta($property[0],'BriefDescription', true); ?></p>
+                          <?php echo variations_email_ataglance(get_host(),$property[0]); ?>
                         </div>
                       </td>
                     </tr>
@@ -188,8 +191,7 @@ function elegant_email_body($messagtext,$properties){
                     <tr>
                       <td align="left" style="word-wrap:break-word;font-size:0px;padding:0px 20px 0px 20px;">
                         <div style="cursor:auto;color:#000000;font-family:Arial,Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;text-align:left;">
-                            <p>Reference: <?php echo get_post_meta($property[0],'reference_code', true); ?><br>
-                          	Property Type: <?php echo get_post_meta($property[0],'type_name', true); ?><br>
+                            <p>Property Type: <?php echo get_post_meta($property[0],'type_name', true); ?><br>
                             Location: <?php echo location($property[0]); ?><br>                             
                             <span style="font-weight:bold;">Price: <?php echo $property[2]; ?></span></p>                            
                             <?php echo variations_brochurelink(get_host(),$property[0]); ?> 
