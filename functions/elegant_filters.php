@@ -16,7 +16,7 @@ function elegant_filters(){
 		<tr>
 			<td valign="top">
 				<h4>Property Status</h4>
-				<ul class="propertystatus">
+				<ul class="propertystatus" multiple>
 					<li data-id="publish">Public</li>
 					<li data-id="private">Private</li>
 					<li data-id="draft">Draft</li>
