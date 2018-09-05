@@ -150,7 +150,11 @@ function elegant_email_body($messagtext,$properties){
                           <tbody>
                             <tr>
                             <?php
-                            $imageurl = knoppys_property_header($property[0],get_post_meta($property[0],'image_1', true)); ?>
+                              if (get_host() == 'elegant-address.com') {
+                                $imageurl = get_the_post_thumbnail_url($property[0],'medium');
+                              } else {
+                                $imageurl = knoppys_property_header($property[0],get_post_meta($property[0],'image_1', true));  
+                              }
                             ?>
                               <td style="width:600px;padding:10px;"><img alt="" width="100%" height="auto" src="<?php echo $imageurl; ?>" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;"></td>
                             </tr>
